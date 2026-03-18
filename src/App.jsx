@@ -27,38 +27,133 @@ const PHASE1_DATA = {
       "\"Antes de começarmos, deixe eu te mostrar as 6 máquinas simples que movem o mundo...\""
     ]
   },
+  transition: "Impressionante! Você já consegue reconhecer máquinas simples escondidas nos objetos do dia a dia. A máquina do tempo ganhou sua primeira carga de energia! Mas identificar é só o começo... agora você precisa entender COMO cada máquina funciona. Encontrei meu velho diário de anotações, mas ele está danificado. Vai me ajudar a reconstruí-lo?",
   teaching: {
     title: "As 6 Máquinas Simples",
     text: "Máquinas simples são dispositivos mecânicos básicos que facilitam a realização de trabalho, modificando a intensidade, a direção ou a distância de aplicação de uma força. Existem 6 tipos fundamentais:",
   },
   questions: [
-    { id: "p1q1", object: "Rampa de skate 🛹", answer: "planoInclinado", hint: "É uma superfície que vai do chão até uma altura maior..." },
-    { id: "p1q2", object: "Varal com cordinha 🧺", answer: "roldana", hint: "O que acontece quando você puxa a corda de um lado?" },
-    { id: "p1q3", object: "Carriola / carrinho de mão 🏗️", answer: "alavanca", hint: "Você empurra de um lado e o peso sobe do outro. Onde fica o ponto de apoio?" },
-    { id: "p1q4", object: "Tampa de garrafa rosqueável 🍶", answer: "parafuso", hint: "Pense nas ranhuras em espiral da tampa..." },
-    { id: "p1q5", object: "Machado 🪓", answer: "cunha", hint: "A lâmina tem forma triangular que separa a madeira..." },
-    { id: "p1q6", object: "Maçaneta redonda da porta 🚪", answer: "rodaEixo", hint: "Ela gira em torno de um ponto central..." },
-    { id: "p1q7", object: "Mastro de bandeira com corda 🚩", answer: "roldana", hint: "Pense na rodinha lá no topo por onde passa a corda para erguer a bandeira..." },
-    { id: "p1q8", object: "Tesoura ✂️", answer: "alavanca", hint: "Observe o ponto onde as duas lâminas se cruzam... é um ponto de apoio!" },
-    { id: "p1q9", object: "Escada 🪜", answer: "planoInclinado", hint: "Cada degrau é como um pequeno plano que te leva mais alto..." },
-    { id: "p1q10", object: "Saca-rolha 🍷", answer: "parafuso", hint: "Observe a espiral metálica que penetra a rolha ao girar..." },
-    { id: "p1q11", object: "Roda de bicicleta 🚲", answer: "rodaEixo", hint: "Uma roda girando ao redor de um eixo central!" },
-    { id: "p1q12", object: "Faca de cozinha 🔪", answer: "cunha", hint: "Olhe a lâmina de lado... que formato ela tem?" },
+    { id: "p1q1", object: "Rampa de skate 🛹", answer: "planoInclinado", hint: "É uma superfície que vai do chão até uma altura maior...",
+      feedbacks: {
+        planoInclinado: "Isso mesmo! A rampa de skate é um plano inclinado clássico: uma superfície que permite subir ou descer usando menos esforço do que um salto direto!",
+        alavanca: "Não é essa! A alavanca precisa de um ponto de apoio fixo e uma barra que gire. A rampa de skate não gira em torno de nada — ela é uma superfície contínua que liga dois níveis de altura. Isso é um plano inclinado!",
+        cunha: "Quase, mas a cunha serve para cortar ou separar materiais, como a lâmina de uma faca. A rampa de skate não corta nada — ela facilita subir ou descer. Isso é um plano inclinado!",
+        parafuso: "Não é essa! O parafuso é um plano inclinado enrolado em espiral. A rampa de skate é reta, não espiral. Ela é um plano inclinado na sua forma mais simples!",
+        roldana: "Não é essa! A roldana é uma roda com corda que muda a direção da força. A rampa de skate não usa rodas nem cordas — é uma superfície inclinada. Isso é um plano inclinado!",
+        rodaEixo: "Não é essa! A roda com eixo gira em torno de um centro, como uma maçaneta. A rampa de skate não gira — ela é uma superfície fixa que conecta dois níveis. Isso é um plano inclinado!",
+      }
+    },
+    { id: "p1q2", object: "Varal com cordinha 🧺", answer: "roldana", hint: "O que acontece quando você puxa a corda de um lado?",
+      feedbacks: {
+        roldana: "Perfeito! No varal, a cordinha passa por uma rodinha (roldana) que permite mover as roupas puxando de um lado só. A roldana muda a direção do movimento!",
+        alavanca: "Não é essa! A alavanca é uma barra que gira em torno de um ponto fixo. No varal, o que move as roupas é a corda passando por uma rodinha — e rodinha com corda é uma roldana!",
+        planoInclinado: "Não é essa! O plano inclinado é uma rampa. O varal funciona com uma corda que desliza por uma rodinha para mover as roupas. Essa rodinha é uma roldana!",
+        cunha: "Não é essa! A cunha serve para cortar ou separar. No varal, o mecanismo é uma corda passando por uma rodinha que muda a direção do movimento. Isso é uma roldana!",
+        parafuso: "Não é essa! O parafuso tem formato espiral. No varal, o que faz o sistema funcionar é a corda passando por uma rodinha — e isso é uma roldana!",
+        rodaEixo: "Quase! A roldana é parecida com a roda com eixo, mas a diferença é que na roldana a corda passa pelo sulco da roda para mover algo. No varal, a corda desliza pela rodinha — isso é uma roldana!",
+      }
+    },
+    { id: "p1q3", object: "Carriola / carrinho de mão 🏗️", answer: "alavanca", hint: "Você empurra de um lado e o peso sobe do outro. Onde fica o ponto de apoio?",
+      feedbacks: {
+        alavanca: "Excelente! A carriola é uma alavanca: a roda na frente é o ponto de apoio (fulcro), a carga fica no meio e você aplica força nas alças. Sua força se multiplica!",
+        planoInclinado: "Não é essa! O plano inclinado é uma rampa. A carriola funciona com um princípio diferente: você faz força nas alças, a roda serve de ponto de apoio e a carga no meio é erguida. Isso é uma alavanca!",
+        cunha: "Não é essa! A cunha serve para cortar ou separar. A carriola funciona porque a roda (ponto de apoio) permite que a força nas alças levante a carga. Isso é o princípio da alavanca!",
+        parafuso: "Não é essa! O parafuso é uma espiral que fixa ou eleva. Na carriola, a roda funciona como ponto de apoio e as alças como braço de força — isso é uma alavanca!",
+        roldana: "Não é essa! A roldana usa corda e roda para mudar a direção da força. Na carriola, não há corda — a roda é o ponto de apoio e as alças são o braço. Isso é uma alavanca!",
+        rodaEixo: "Quase! A carriola tem roda, mas o princípio principal não é a roda com eixo. O que importa é que a roda funciona como ponto de apoio (fulcro): você faz força nas alças e a carga é erguida. Esse é o princípio da alavanca!",
+      }
+    },
+    { id: "p1q4", object: "Tampa de garrafa rosqueável 🍶", answer: "parafuso", hint: "Pense nas ranhuras em espiral da tampa...",
+      feedbacks: {
+        parafuso: "Isso mesmo! As ranhuras em espiral da tampa funcionam como um parafuso: ao girar (movimento circular), a tampa sobe ou desce (movimento linear). Um plano inclinado enrolado!",
+        alavanca: "Não é essa! A alavanca usa um ponto de apoio e uma barra. A tampa rosqueável funciona por causa das ranhuras em espiral — ao girar, ela sobe ou desce. Espiral é a marca do parafuso!",
+        planoInclinado: "Quase! Você pensou bem, porque o parafuso é, na verdade, um plano inclinado enrolado em espiral. Mas como a tampa usa o formato espiral para converter giro em movimento linear, chamamos de parafuso!",
+        cunha: "Não é essa! A cunha corta ou separa com formato triangular. A tampa rosqueável funciona com ranhuras em espiral — ao girar, ela sobe ou desce. Isso é um parafuso!",
+        roldana: "Não é essa! A roldana é uma roda com corda. A tampa funciona pelas ranhuras em espiral que convertem o giro em movimento de subir/descer. Isso é um parafuso!",
+        rodaEixo: "Não é essa! Embora a tampa gire, ela não funciona como roda com eixo. O segredo está nas ranhuras em espiral: o giro se converte em movimento de subir ou descer. Isso é um parafuso!",
+      }
+    },
+    { id: "p1q5", object: "Machado 🪓", answer: "cunha", hint: "A lâmina tem forma triangular que separa a madeira...",
+      feedbacks: {
+        cunha: "Isso mesmo! A lâmina do machado tem formato triangular — ao atingir a madeira, a força do golpe é convertida em duas forças laterais que separam as fibras. Cunha pura!",
+        alavanca: "Não é essa! O cabo do machado até ajuda a amplificar a força, mas o princípio da ferramenta está na lâmina: ela tem formato triangular que separa a madeira. Esse formato é uma cunha!",
+        planoInclinado: "Quase! A cunha é, na verdade, dois planos inclinados unidos. Mas como a lâmina do machado usa esse formato para separar materiais, chamamos de cunha!",
+        parafuso: "Não é essa! O parafuso é uma espiral que fixa ou eleva. A lâmina do machado não tem espiral — ela tem formato triangular que corta separando o material para os lados. Isso é uma cunha!",
+        roldana: "Não é essa! A roldana é uma roda com corda. O machado funciona pela sua lâmina triangular, que converte a força do golpe em duas forças que separam a madeira. Isso é uma cunha!",
+        rodaEixo: "Não é essa! A roda com eixo facilita o movimento giratório. O machado não gira — ele corta, usando uma lâmina triangular que separa o material. Esse princípio é o da cunha!",
+      }
+    },
+    { id: "p1q6", object: "Maçaneta redonda da porta 🚪", answer: "rodaEixo", hint: "Ela gira em torno de um ponto central...",
+      feedbacks: {
+        rodaEixo: "Perfeito! A maçaneta é uma roda grande (a parte que você gira) presa a um eixo pequeno (o mecanismo interno). Pouca força na maçaneta gera força suficiente para acionar a tranca!",
+        alavanca: "Não é essa! A alavanca é uma barra que gira em torno de um ponto fixo. A maçaneta gira inteira ao redor de um eixo central — essa é a marca da roda com eixo!",
+        planoInclinado: "Não é essa! O plano inclinado é uma rampa. A maçaneta funciona como uma roda presa a um eixo: ao girar a parte externa (roda grande), o mecanismo interno (eixo pequeno) aciona a tranca. Isso é roda com eixo!",
+        cunha: "Não é essa! A cunha corta ou separa com formato triangular. A maçaneta funciona girando ao redor de um eixo central, amplificando sua força para abrir a porta. Isso é roda com eixo!",
+        parafuso: "Não é essa! O parafuso tem ranhuras em espiral. A maçaneta redonda não tem espiral — ela é uma roda que gira ao redor de um eixo central para acionar a tranca. Isso é roda com eixo!",
+        roldana: "Não é essa! A roldana usa corda passando por uma roda. A maçaneta não tem corda — ela funciona como roda grande presa a um eixo pequeno, amplificando sua força para abrir a porta. Isso é roda com eixo!",
+      }
+    },
+    { id: "p1q7", object: "Mastro de bandeira com corda 🚩", answer: "roldana", hint: "Pense na rodinha lá no topo por onde passa a corda para erguer a bandeira...",
+      feedbacks: {
+        roldana: "Isso mesmo! No topo do mastro há uma rodinha (roldana) por onde passa a corda. Você puxa a corda para baixo e a bandeira sobe. A roldana muda a direção da força!",
+        alavanca: "Não é essa! A alavanca é uma barra com ponto de apoio. No mastro de bandeira, o que ergue a bandeira é a corda passando por uma rodinha no topo — e rodinha com corda é uma roldana!",
+        planoInclinado: "Não é essa! O plano inclinado é uma rampa. No mastro, a bandeira sobe porque a corda passa por uma rodinha no topo — você puxa para baixo e ela sobe. Isso é uma roldana!",
+        cunha: "Não é essa! A cunha corta ou separa materiais. No mastro de bandeira, o princípio é outro: uma corda passa por uma rodinha no topo, mudando a direção da força. Isso é uma roldana!",
+        parafuso: "Não é essa! O parafuso usa espiral. No mastro de bandeira, a bandeira sobe graças à corda que passa por uma rodinha no topo. Essa rodinha é uma roldana!",
+        rodaEixo: "Quase! A roldana é parecida com a roda com eixo, mas a diferença é que na roldana a corda passa pelo sulco da roda. No mastro, a corda desliza pela rodinha no topo para erguer a bandeira — isso é uma roldana!",
+      }
+    },
+    { id: "p1q8", object: "Tesoura ✂️", answer: "alavanca", hint: "Observe o ponto onde as duas lâminas se cruzam... é um ponto de apoio!",
+      feedbacks: {
+        alavanca: "Excelente! A tesoura é uma alavanca dupla: o parafusinho no centro é o ponto de apoio (fulcro), suas mãos aplicam força nas alças e a força se multiplica nas pontas das lâminas!",
+        planoInclinado: "Não é essa! O plano inclinado é uma rampa. A tesoura funciona porque duas lâminas giram em torno de um ponto fixo no centro — esse ponto é o fulcro, e o princípio é o da alavanca!",
+        cunha: "Quase! As lâminas da tesoura até têm formato de cunha para cortar, mas o princípio principal da tesoura é outro: as duas lâminas giram em torno de um ponto de apoio central, multiplicando a força. Isso é uma alavanca!",
+        parafuso: "Não é essa! A tesoura tem um parafusinho no centro, mas ele não funciona como parafuso — ele serve como ponto de apoio (fulcro) para as duas lâminas girarem. O princípio é o da alavanca!",
+        roldana: "Não é essa! A roldana é uma roda com corda. A tesoura funciona de forma diferente: duas lâminas giram em torno de um ponto fixo central, multiplicando a força que você faz nas alças. Isso é uma alavanca!",
+        rodaEixo: "Não é essa! Embora a tesoura gire em torno de um ponto, ela não é roda com eixo. O que importa é que as duas lâminas funcionam como braços de alavanca: o ponto central é o fulcro e sua força nas alças se multiplica nas pontas. Isso é uma alavanca!",
+      }
+    },
+    { id: "p1q9", object: "Escada 🪜", answer: "planoInclinado", hint: "Cada degrau é como um pequeno plano que te leva mais alto...",
+      feedbacks: {
+        planoInclinado: "Isso mesmo! A escada é uma sequência de pequenos planos inclinados: cada degrau permite subir uma altura usando menos esforço do que um salto vertical direto!",
+        alavanca: "Não é essa! A alavanca precisa de um ponto de apoio e uma barra que gire. A escada funciona de outro jeito: cada degrau é como um pequeno plano que te eleva gradualmente. Isso é plano inclinado!",
+        cunha: "Não é essa! A cunha serve para cortar ou separar. A escada facilita subir porque cada degrau funciona como um pequeno plano que reduz o esforço de subir. Isso é plano inclinado!",
+        parafuso: "Não é essa! O parafuso é uma espiral. A escada reta não tem espiral — ela é uma sequência de degraus que funcionam como pequenos planos, facilitando a subida. Isso é plano inclinado!",
+        roldana: "Não é essa! A roldana é uma roda com corda. A escada não usa cordas nem rodas — ela facilita subir usando degraus, que são pequenos planos inclinados em sequência!",
+        rodaEixo: "Não é essa! A roda com eixo gira em torno de um centro. A escada não gira — ela te eleva degrau a degrau, e cada degrau funciona como um pequeno plano inclinado!",
+      }
+    },
+    { id: "p1q10", object: "Saca-rolha 🍷", answer: "parafuso", hint: "Observe a espiral metálica que penetra a rolha ao girar...",
+      feedbacks: {
+        parafuso: "Perfeito! A espiral metálica do saca-rolha é um parafuso: ao girar (movimento circular), ela penetra a rolha (movimento linear). Um plano inclinado enrolado em espiral!",
+        alavanca: "Não é essa! Alguns saca-rolhas têm alavancas nas laterais para ajudar a puxar, mas o princípio central é a espiral que penetra a rolha ao girar. Essa espiral é um parafuso!",
+        planoInclinado: "Quase! Você pensou bem, porque o parafuso é um plano inclinado enrolado em espiral. A espiral do saca-rolha converte o giro em penetração linear — por isso chamamos de parafuso!",
+        cunha: "Não é essa! A cunha tem formato triangular e separa materiais. O saca-rolha funciona pela espiral metálica que penetra a rolha ao girar. Essa espiral é um parafuso!",
+        roldana: "Não é essa! A roldana é uma roda com corda. O saca-rolha funciona de forma diferente: sua espiral metálica converte o movimento de girar em penetração na rolha. Isso é um parafuso!",
+        rodaEixo: "Não é essa! Embora você gire o saca-rolha, o princípio não é o da roda com eixo. O segredo está na espiral metálica que converte rotação em movimento linear para dentro da rolha. Isso é um parafuso!",
+      }
+    },
+    { id: "p1q11", object: "Roda de bicicleta 🚲", answer: "rodaEixo", hint: "Uma roda girando ao redor de um eixo central!",
+      feedbacks: {
+        rodaEixo: "Isso mesmo! A roda da bicicleta gira ao redor de um eixo central (o cubo). A roda grande percorre uma distância maior com menos esforço, reduzindo o atrito e facilitando o deslocamento!",
+        alavanca: "Não é essa! A alavanca usa um ponto de apoio e uma barra. A roda de bicicleta funciona girando ao redor de um eixo central — a roda grande facilita o deslocamento. Isso é roda com eixo!",
+        planoInclinado: "Não é essa! O plano inclinado é uma rampa. A roda de bicicleta funciona girando ao redor de um eixo central, reduzindo o atrito e facilitando o movimento. Isso é roda com eixo!",
+        cunha: "Não é essa! A cunha corta ou separa materiais. A roda de bicicleta não corta nada — ela gira ao redor de um eixo, facilitando o deslocamento. Isso é roda com eixo!",
+        parafuso: "Não é essa! O parafuso é uma espiral que converte giro em fixação. A roda de bicicleta não tem espiral — ela gira livremente ao redor de um eixo central. Isso é roda com eixo!",
+        roldana: "Quase! A roldana e a roda com eixo são parecidas, mas a diferença é que a roldana usa corda passando pelo sulco da roda. A roda de bicicleta não tem corda — ela gira no eixo para facilitar o movimento. Isso é roda com eixo!",
+      }
+    },
+    { id: "p1q12", object: "Faca de cozinha 🔪", answer: "cunha", hint: "Olhe a lâmina de lado... que formato ela tem?",
+      feedbacks: {
+        cunha: "Perfeito! Vista de lado, a lâmina da faca tem formato triangular. Ao pressionar para baixo, essa forma converte a força em duas forças laterais que separam o alimento. Cunha clássica!",
+        alavanca: "Não é essa! A alavanca usa ponto de apoio e barra. A faca funciona de outro jeito: a lâmina tem formato triangular que, ao pressionar, separa o material para os lados. Isso é uma cunha!",
+        planoInclinado: "Quase! A cunha é formada por dois planos inclinados unidos. A lâmina da faca usa esse formato triangular para converter sua força em corte lateral. Por isso chamamos de cunha!",
+        parafuso: "Não é essa! O parafuso é uma espiral. A lâmina da faca não tem espiral — ela tem formato triangular que separa o material ao ser pressionada. Isso é uma cunha!",
+        roldana: "Não é essa! A roldana é uma roda com corda. A faca funciona de forma completamente diferente: sua lâmina triangular converte a força para baixo em forças laterais que separam o alimento. Isso é uma cunha!",
+        rodaEixo: "Não é essa! A roda com eixo gira em torno de um centro. A faca não gira — ela corta usando uma lâmina com formato triangular que separa o material. Isso é uma cunha!",
+      }
+    },
   ],
-  feedback: {
-    correct: [
-      "Isso mesmo! Você tem olho de inventor!",
-      "Perfeito! Essa foi rápida!",
-      "Excelente! Você está pegando o jeito!",
-      "Correto! As máquinas simples estão por toda parte, não é?",
-      "Mandou bem! Mestre Arquimedes está impressionado!",
-    ],
-    wrong: [
-      "Hmm, não foi dessa vez. Pense em como esse objeto se move... ele gira? Desliza? Separa?",
-      "Quase! Observe melhor o movimento principal desse objeto.",
-      "Tente de novo! Lembre-se: cada máquina simples tem um jeito próprio de funcionar.",
-    ],
-  }
 };
 
 const PHASE2_DATA = {
@@ -71,6 +166,7 @@ const PHASE2_DATA = {
       "\"Para isso, vou te ensinar como cada máquina simples realmente funciona. Preste atenção!\""
     ]
   },
+  transition: "Fantástico! Você reconstruiu meu diário e agora entende como cada máquina simples funciona. A máquina do tempo está ganhando mais energia! Mas saber como funcionam não é tudo... você precisa ver como a humanidade usou essas máquinas para mudar o mundo. Prepare-se: vamos fazer uma viagem no tempo!",
   teaching: {
     title: "Como Funcionam as Máquinas Simples",
     cards: [
@@ -83,18 +179,94 @@ const PHASE2_DATA = {
     ]
   },
   questions: [
-    { id: "p2q1", type: "complete", text: "Uma rampa facilita carregar coisas pesadas porque permite usar ___ força ao percorrer uma ___ maior.", options: ["menos / distância", "mais / distância", "menos / altura", "mais / velocidade"], answer: 0, explanation: "O plano inclinado distribui o esforço por uma distância maior. Resultado: você usa MENOS FORÇA para subir a mesma altura!" },
-    { id: "p2q2", type: "trueFalse", text: "Verdadeiro ou Falso: Um parafuso é, na verdade, um plano inclinado enrolado em espiral.", answer: true, explanation: "Exatamente! Se você 'desenrolar' a rosca de um parafuso, verá que é uma rampa em espiral. Genial, não?" },
-    { id: "p2q3", type: "multiple", text: "Qual máquina simples muda a DIREÇÃO da força aplicada?", options: ["Cunha", "Roldana", "Plano inclinado", "Parafuso"], answer: 1, explanation: "A roldana permite que você puxe para BAIXO enquanto o objeto sobe. Ela muda a direção da força!" },
-    { id: "p2q4", type: "complete", text: "Na alavanca, quanto mais ___ do ponto de apoio a força é aplicada, ___ esforço é necessário.", options: ["longe / menos", "perto / menos", "longe / mais", "perto / mais"], answer: 0, explanation: "É o princípio da alavanca! Maior distância do fulcro = maior vantagem mecânica = menos esforço. Pense na gangorra: o lado mais longo levanta o mais curto com facilidade." },
-    { id: "p2q5", type: "trueFalse", text: "Verdadeiro ou Falso: A cunha transforma uma força para frente em duas forças laterais.", answer: true, explanation: "Correto! É por isso que uma faca corta: a força que você faz para baixo é convertida em forças que separam o material para os lados." },
-    { id: "p2q6", type: "multiple", text: "Qual é o princípio da roda com eixo?", options: ["Muda a direção da força", "Transforma força em calor", "Amplifica o movimento: pouca força na roda gera muita força no eixo", "Corta materiais pela metade"], answer: 2, explanation: "A roda grande amplifica o efeito! Pense no volante do carro: um giro suave move rodas pesadas." },
-    { id: "p2q7", type: "trueFalse", text: "Verdadeiro ou Falso: Uma roldana fixa (presa no teto) multiplica a força aplicada.", answer: false, explanation: "Uma roldana fixa sozinha NÃO multiplica a força — ela apenas muda a direção. Para multiplicar, é preciso um sistema com várias roldanas!" },
-    { id: "p2q8", type: "multiple", text: "Qual objeto NÃO é um exemplo de cunha?", options: ["Machado", "Prego", "Gangorra", "Faca"], answer: 2, explanation: "A gangorra é uma ALAVANCA! Já machado, prego e faca são cunhas — todos têm formato que separa materiais." },
-    { id: "p2q9", type: "complete", text: "Quanto mais ___ a inclinação de uma rampa, ___ o esforço necessário para subir.", options: ["suave / menor", "suave / maior", "íngreme / menor", "curta / menor"], answer: 0, explanation: "Quanto mais suave (menos íngreme) a rampa, maior a distância percorrida, mas MENOR a força necessária. É a troca do plano inclinado: mais caminho, menos esforço!" },
-    { id: "p2q10", type: "multiple", text: "O saca-rolha é um exemplo de qual máquina simples?", options: ["Alavanca", "Cunha", "Parafuso", "Roldana"], answer: 2, explanation: "O saca-rolha tem formato de espiral — é um parafuso! Ao girar (movimento circular), ele penetra a rolha (movimento linear)." },
-    { id: "p2q11", type: "trueFalse", text: "Verdadeiro ou Falso: A roda com eixo funciona porque uma força pequena aplicada na roda grande gera uma força maior no eixo pequeno.", answer: true, explanation: "Exatamente! É o mesmo princípio do volante do carro: você gira a roda grande com pouca força e as rodas pesadas respondem com força amplificada." },
-    { id: "p2q12", type: "multiple", text: "Uma pessoa empurra uma caixa pesada por uma rampa em vez de levantá-la direto. Por que a rampa facilita?", options: ["Porque a caixa fica mais leve na rampa", "Porque a rampa elimina a gravidade", "Porque a distância maior permite usar menos força", "Porque a rampa empurra a caixa sozinha"], answer: 2, explanation: "A rampa (plano inclinado) distribui o esforço por uma distância maior. A caixa não fica mais leve — você é que precisa de MENOS FORÇA para movê-la, percorrendo um caminho mais longo." },
+    { id: "p2q1", type: "complete", text: "Uma rampa facilita carregar coisas pesadas porque permite usar ___ força ao percorrer uma ___ maior.", options: ["menos / distância", "mais / distância", "menos / altura", "mais / velocidade"], answer: 0, hint: "Pense assim: a rampa é mais longa que uma subida direta. O que você ganha percorrendo esse caminho maior?",
+      feedbacks: [
+        "Exatamente! Esse é o segredo do plano inclinado: percorrendo uma distância maior (a rampa), você usa MENOS força para subir a mesma altura. É uma troca inteligente!",
+        "Quase! Você acertou que a distância é maior, mas errou o efeito. A rampa existe justamente para REDUZIR a força, não aumentá-la. Se usasse mais força, não haveria vantagem em usar rampa!",
+        "Você acertou que usa menos força, mas a altura não muda — o objeto precisa chegar ao mesmo ponto alto. O que aumenta é a DISTÂNCIA percorrida. A rampa é mais longa que uma subida vertical, e é isso que reduz o esforço!",
+        "Não é essa! A rampa não tem a ver com velocidade. Seu princípio é outro: ao percorrer uma DISTÂNCIA maior (o caminho da rampa), você usa MENOS força para elevar o objeto à mesma altura!",
+      ]
+    },
+    { id: "p2q2", type: "trueFalse", text: "Verdadeiro ou Falso: Um parafuso é, na verdade, um plano inclinado enrolado em espiral.", answer: true, hint: "Imagine que você 'desenrola' a rosca de um parafuso, esticando-a sobre a mesa. Que forma aparece?",
+      feedbacks: {
+        true: "Exatamente! Se você 'desenrolar' a rosca de um parafuso, verá que é uma rampa em espiral. Genial, não? Por isso o parafuso converte giro em movimento linear!",
+        false: "Na verdade, é verdadeiro! Faça o teste mental: imagine desenrolar a rosca de um parafuso. Você verá um plano inclinado (rampa) esticado. O parafuso é essa rampa enrolada em espiral, e é por isso que ao girar ele avança em linha reta!",
+      }
+    },
+    { id: "p2q3", type: "multiple", text: "Qual máquina simples muda a DIREÇÃO da força aplicada?", options: ["Cunha", "Roldana", "Plano inclinado", "Parafuso"], answer: 1, hint: "Pense no mastro de bandeira: você puxa a corda para baixo, mas a bandeira sobe. Que máquina faz isso?",
+      feedbacks: [
+        "Não é essa! A cunha transforma uma força para frente em forças laterais — ela DIVIDE a força, não muda a direção. Quem muda a direção é a roldana: você puxa para baixo e o objeto sobe!",
+        "Correto! A roldana muda a direção da força: você puxa para BAIXO enquanto o objeto sobe. É por isso que funciona tão bem em mastros de bandeira e guindastes!",
+        "Não é essa! O plano inclinado reduz o esforço distribuindo-o por uma distância maior, mas a força continua na mesma direção (ao longo da rampa). Quem muda a direção da força é a roldana!",
+        "Não é essa! O parafuso converte movimento circular em linear, mas isso é mudança de tipo de movimento, não de direção da força. Quem muda a direção é a roldana: puxando para baixo, o objeto sobe!",
+      ]
+    },
+    { id: "p2q4", type: "complete", text: "Na alavanca, quanto mais ___ do ponto de apoio a força é aplicada, ___ esforço é necessário.", options: ["longe / menos", "perto / menos", "longe / mais", "perto / mais"], answer: 0, hint: "Pense na gangorra: se você se sentar bem na ponta, fica mais fácil ou mais difícil levantar quem está do outro lado?",
+      feedbacks: [
+        "Isso mesmo! É o princípio da alavanca: maior distância do fulcro = maior vantagem mecânica = menos esforço. Pense na gangorra: o lado mais longo levanta o mais curto com facilidade!",
+        "É o contrário! Quanto mais PERTO do ponto de apoio, MAIS difícil fica. Pense na gangorra: se você sentar pertinho do centro, não consegue levantar ninguém. A vantagem da alavanca vem da DISTÂNCIA!",
+        "Você acertou que longe é importante, mas o efeito é o oposto! Quanto mais longe do fulcro, MENOS esforço você precisa, não mais. Esse é justamente o benefício da alavanca!",
+        "Você acertou que perto exige mais esforço, mas a frase pede a relação correta. O princípio da alavanca é: quanto mais LONGE do ponto de apoio, MENOS força é necessária. A distância é sua aliada!",
+      ]
+    },
+    { id: "p2q5", type: "trueFalse", text: "Verdadeiro ou Falso: A cunha transforma uma força para frente em duas forças laterais.", answer: true, hint: "Imagine um machado atingindo um tronco. A força vai para baixo, mas a madeira se separa para os lados. Como isso acontece?",
+      feedbacks: {
+        true: "Correto! É por isso que uma faca corta: a força que você faz para baixo é convertida em forças que separam o material para os lados. Essa é a essência da cunha!",
+        false: "Na verdade, é verdadeiro! Pense na faca cortando um alimento: você pressiona para baixo, mas o alimento se abre para os lados. Essa conversão de uma força direcional em duas laterais é exatamente o que a cunha faz!",
+      }
+    },
+    { id: "p2q6", type: "multiple", text: "Qual é o princípio da roda com eixo?", options: ["Muda a direção da força", "Transforma força em calor", "Amplifica o movimento: pouca força na roda gera muita força no eixo", "Corta materiais pela metade"], answer: 2, hint: "Pense no volante de um carro: você gira o volante com pouca força, mas as rodas pesadas respondem. Como isso é possível?",
+      feedbacks: [
+        "Essa é a função da roldana, não da roda com eixo! A roda com eixo faz outra coisa: a roda grande amplifica o efeito — pouca força na roda se transforma em muita força no eixo.",
+        "Não é essa! Nenhuma máquina simples tem como função transformar força em calor. A roda com eixo amplifica o movimento: pouca força aplicada na roda grande gera muita força no eixo pequeno!",
+        "Exatamente! A roda grande amplifica o efeito. Pense no volante do carro: um giro suave nas suas mãos move rodas pesadas. Essa é a vantagem mecânica da roda com eixo!",
+        "Não é essa! Quem corta e separa materiais é a cunha. A roda com eixo tem outro princípio: a roda grande amplifica o movimento, fazendo com que pouca força na roda gere muita força no eixo!",
+      ]
+    },
+    { id: "p2q7", type: "trueFalse", text: "Verdadeiro ou Falso: Uma roldana fixa (presa no teto) multiplica a força aplicada.", answer: false, hint: "A roldana fixa facilita o trabalho, sim, mas será que ela realmente multiplica sua força, ou faz outra coisa?",
+      feedbacks: {
+        true: "Essa é uma confusão muito comum! A roldana fixa sozinha NÃO multiplica a força — ela apenas muda a DIREÇÃO. Você puxa para baixo e o objeto sobe, mas a força necessária continua a mesma. Para multiplicar, é preciso um sistema com várias roldanas!",
+        false: "Correto! Uma roldana fixa sozinha NÃO multiplica a força — ela apenas muda a direção. Para multiplicar a força, é preciso um sistema com várias roldanas! Essa é uma pegadinha que confunde muita gente.",
+      }
+    },
+    { id: "p2q8", type: "multiple", text: "Qual objeto NÃO é um exemplo de cunha?", options: ["Machado", "Prego", "Gangorra", "Faca"], answer: 2, hint: "A cunha tem formato triangular e serve para cortar ou separar. Qual desses objetos não faz isso?",
+      feedbacks: [
+        "O machado É uma cunha! Sua lâmina tem formato triangular que separa a madeira ao converter a força do golpe em duas forças laterais. O objeto que não é cunha nesta lista é a gangorra — ela é uma alavanca!",
+        "O prego É uma cunha! Sua ponta tem formato triangular que penetra e separa as fibras da madeira. O objeto que não é cunha nesta lista é a gangorra — ela é uma alavanca!",
+        "Exatamente! A gangorra é uma ALAVANCA — uma barra que gira em torno de um ponto de apoio central. Já o machado, o prego e a faca são todos cunhas: têm formato triangular que corta ou separa materiais.",
+        "A faca É uma cunha! Sua lâmina tem formato triangular que separa o alimento ao converter a força para baixo em forças laterais. O objeto que não é cunha nesta lista é a gangorra — ela é uma alavanca!",
+      ]
+    },
+    { id: "p2q9", type: "complete", text: "Quanto mais ___ a inclinação de uma rampa, ___ o esforço necessário para subir.", options: ["suave / menor", "suave / maior", "íngreme / menor", "curta / menor"], answer: 0, hint: "Compare duas rampas: uma bem íngreme e outra bem suave. Qual delas você preferiria para empurrar uma caixa pesada?",
+      feedbacks: [
+        "Isso mesmo! Quanto mais suave (menos íngreme) a rampa, maior a distância percorrida, mas MENOR a força necessária. É a troca do plano inclinado: mais caminho, menos esforço!",
+        "Você acertou o 'suave', mas inverteu o efeito! Rampa suave significa caminho mais longo, e caminho mais longo significa MENOS esforço, não mais. Essa é a vantagem do plano inclinado!",
+        "É o contrário! Quanto mais íngreme a rampa, MAIS esforço é necessário, porque a distância é curta e a subida é brusca. A rampa SUAVE é que reduz o esforço, distribuindo-o por um caminho mais longo!",
+        "Não é essa! Rampa curta geralmente significa rampa íngreme, o que exige MAIS esforço. O que reduz o esforço é a inclinação SUAVE: um caminho mais longo que distribui a força necessária por uma distância maior!",
+      ]
+    },
+    { id: "p2q10", type: "multiple", text: "O saca-rolha é um exemplo de qual máquina simples?", options: ["Alavanca", "Cunha", "Parafuso", "Roldana"], answer: 2, hint: "Observe o formato da parte metálica do saca-rolha. Ela é reta ou tem algum padrão diferente?",
+      feedbacks: [
+        "Não é essa! Alguns saca-rolhas têm alavancas laterais para ajudar a puxar a rolha, mas a máquina simples principal é a espiral metálica que penetra a rolha ao girar. Espiral que converte giro em avanço linear é um parafuso!",
+        "Não é essa! A cunha tem formato triangular e separa materiais. O saca-rolha funciona por outro princípio: sua espiral metálica converte o movimento de girar em penetração na rolha. Isso é um parafuso!",
+        "Correto! O saca-rolha tem formato de espiral — é um parafuso! Ao girar (movimento circular), ele penetra a rolha (movimento linear). Movimento circular virando linear é a marca do parafuso!",
+        "Não é essa! A roldana é uma roda com corda que muda a direção da força. O saca-rolha funciona de forma diferente: sua espiral metálica converte o giro em avanço linear dentro da rolha. Isso é um parafuso!",
+      ]
+    },
+    { id: "p2q11", type: "trueFalse", text: "Verdadeiro ou Falso: A roda com eixo funciona porque uma força pequena aplicada na roda grande gera uma força maior no eixo pequeno.", answer: true, hint: "Pense na chave de fenda: o cabo é a roda grande e a ponta é o eixo. Onde você faz força e onde o efeito aparece?",
+      feedbacks: {
+        true: "Exatamente! É o mesmo princípio do volante do carro: você gira a roda grande com pouca força e as rodas pesadas respondem com força amplificada. A roda grande é sua aliada!",
+        false: "Na verdade, é verdadeiro! Esse é exatamente o princípio da roda com eixo. Pense na chave de fenda: você gira o cabo (roda grande) com pouca força e a ponta (eixo pequeno) aplica uma força muito maior no parafuso. A diferença de tamanho entre roda e eixo é o que cria a vantagem mecânica!",
+      }
+    },
+    { id: "p2q12", type: "multiple", text: "Uma pessoa empurra uma caixa pesada por uma rampa em vez de levantá-la direto. Por que a rampa facilita?", options: ["Porque a caixa fica mais leve na rampa", "Porque a rampa elimina a gravidade", "Porque a distância maior permite usar menos força", "Porque a rampa empurra a caixa sozinha"], answer: 2, hint: "A caixa precisa chegar à mesma altura nos dois casos. O que muda entre subir direto e usar a rampa?",
+      feedbacks: [
+        "Não é isso! A caixa continua com o mesmo peso — a gravidade não muda. O que muda é a forma como você aplica a força: a rampa distribui o esforço por uma distância maior, permitindo usar menos força!",
+        "Não é isso! A gravidade continua agindo normalmente. A rampa não elimina nenhuma força — ela distribui o esforço por um caminho mais longo. Resultado: você percorre mais distância, mas usa menos força a cada momento!",
+        "Correto! A rampa distribui o esforço por uma distância maior. A caixa não fica mais leve — você é que precisa de MENOS FORÇA para movê-la, percorrendo um caminho mais longo. Essa é a troca inteligente do plano inclinado!",
+        "Não é isso! A rampa não tem motor nem empurra nada. É você quem faz a força! A vantagem é que a rampa distribui o esforço por uma distância maior, permitindo que você use menos força a cada momento para elevar a caixa à mesma altura!",
+      ]
+    },
   ]
 };
 
@@ -108,6 +280,7 @@ const PHASE3_DATA = {
       "\"Se entender bem o que viu, teremos energia suficiente para o próximo salto. Preparado?\""
     ]
   },
+  transition: "Que viagem incrível! Você viu com os próprios olhos como as máquinas simples transformaram o mundo ao longo de milhares de anos. A máquina do tempo está quase com energia total! Agora vem o próximo desafio: você aprendeu que máquinas complexas são combinações de simples. Mas será que consegue DESMONTAR uma máquina complexa e identificar as simples escondidas dentro dela?",
   periods: [
     {
       id: "egypt",
@@ -116,8 +289,22 @@ const PHASE3_DATA = {
       narrative: "Você chega ao deserto egípcio sob um sol escaldante. Milhares de trabalhadores movem blocos de pedra que pesam mais de 2 toneladas cada! Como eles conseguem?",
       teaching: "Os egípcios usaram PLANOS INCLINADOS (rampas gigantes de terra e areia) para arrastar os blocos até o topo das pirâmides. Também usaram ALAVANCAS (troncos de madeira) para erguer e posicionar os blocos, e CUNHAS (ferramentas de cobre) para cortar as pedras nas pedreiras. Sem motores, sem eletricidade — apenas máquinas simples e engenhosidade humana!",
       questions: [
-        { id: "p3q1", text: "Qual máquina simples foi essencial para mover blocos de pedra até o topo das pirâmides?", options: ["Roldana", "Parafuso", "Plano inclinado (rampa)", "Roda com eixo"], answer: 2 },
-        { id: "p3q2", text: "Os egípcios cortavam pedras nas pedreiras usando ferramentas em forma de triângulo. Que máquina simples é essa?", options: ["Alavanca", "Cunha", "Parafuso", "Roldana"], answer: 1 },
+        { id: "p3q1", text: "Qual máquina simples foi essencial para mover blocos de pedra até o topo das pirâmides?", options: ["Roldana", "Parafuso", "Plano inclinado (rampa)", "Roda com eixo"], answer: 2, hint: "Os blocos precisavam subir a pirâmide. Os egípcios construíam enormes estruturas de terra ao lado da pirâmide para arrastar as pedras. Que formato tinham essas estruturas?",
+          feedbacks: [
+            "Não é essa! Embora roldanas existissem na antiguidade, os egípcios da época das pirâmides não utilizavam sistemas de roldanas para essa tarefa. Eles construíam imensas rampas de terra e areia ao lado das pirâmides para arrastar os blocos até o topo. Essas rampas são planos inclinados!",
+            "Não é essa! O parafuso ainda não era usado dessa forma no Egito Antigo. A solução dos egípcios era mais simples e grandiosa: rampas enormes de terra e areia construídas ao lado das pirâmides, por onde os blocos eram arrastados. Essas rampas são planos inclinados!",
+            "Correto! Os egípcios construíram gigantescas rampas de terra e areia ao lado das pirâmides. Arrastando os blocos por essas rampas, usavam menos força do que se tentassem erguê-los direto. Engenhosidade pura com planos inclinados!",
+            "Não é essa! Curiosamente, os egípcios da época das pirâmides ainda não usavam rodas para transporte de pedras. Sua solução foi construir imensas rampas de terra e areia para arrastar os blocos até o topo. Essas rampas são planos inclinados!",
+          ]
+        },
+        { id: "p3q2", text: "Os egípcios cortavam pedras nas pedreiras usando ferramentas em forma de triângulo. Que máquina simples é essa?", options: ["Alavanca", "Cunha", "Parafuso", "Roldana"], answer: 1, hint: "Ferramentas com ponta triangular que penetram e separam a pedra... que máquina simples tem esse formato e essa função?",
+          feedbacks: [
+            "Não é essa! A alavanca usa ponto de apoio para multiplicar força, mas não tem formato triangular para cortar. As ferramentas triangulares dos egípcios penetravam a pedra e separavam blocos — esse formato que corta e separa é a cunha!",
+            "Isso mesmo! As ferramentas de cobre dos egípcios tinham formato triangular: ao serem marteladas na rocha, convertiam a força do golpe em forças laterais que rachavam e separavam os blocos. Cunhas em ação há 4.500 anos!",
+            "Não é essa! O parafuso é uma espiral que converte giro em avanço linear. As ferramentas dos egípcios não tinham espiral — tinham formato triangular que, ao ser martelado na rocha, separava os blocos. Esse formato é a cunha!",
+            "Não é essa! A roldana é uma roda com corda que muda a direção da força. As ferramentas de corte dos egípcios funcionavam de outro modo: tinham ponta triangular que penetrava e separava a rocha. Isso é uma cunha!",
+          ]
+        },
       ]
     },
     {
@@ -127,8 +314,22 @@ const PHASE3_DATA = {
       narrative: "Você chega a Siracusa e encontra o próprio Arquimedes! Ele está empolgado demonstrando como uma única pessoa pode mover objetos enormes.",
       teaching: "Arquimedes descobriu os princípios matemáticos da ALAVANCA e disse a famosa frase: \"Dê-me um ponto de apoio e moverei o mundo!\" Ele também inventou a ROLDANA COMPOSTA — um sistema com várias roldanas que multiplica a força. Conta a lenda que Arquimedes, sozinho, conseguiu puxar um navio inteiro para fora da água usando esse sistema! Os gregos também usaram o PARAFUSO DE ARQUIMEDES para elevar água para irrigação.",
       questions: [
-        { id: "p3q3", text: "Qual foi a grande contribuição de Arquimedes para as máquinas simples?", options: ["Inventou a roda", "Descobriu o fogo", "Desenvolveu os princípios da alavanca e inventou a roldana composta", "Construiu as pirâmides"], answer: 2 },
-        { id: "p3q4", text: "O Parafuso de Arquimedes era usado para:", options: ["Cortar madeira", "Elevar água para irrigação", "Construir navios", "Fazer fogo"], answer: 1 },
+        { id: "p3q3", text: "Qual foi a grande contribuição de Arquimedes para as máquinas simples?", options: ["Inventou a roda", "Descobriu o fogo", "Desenvolveu os princípios da alavanca e inventou a roldana composta", "Construiu as pirâmides"], answer: 2, hint: "Arquimedes ficou famoso por duas grandes contribuições à mecânica. Uma envolve o ponto de apoio, a outra envolve várias rodas com corda trabalhando juntas...",
+          feedbacks: [
+            "Não é essa! A roda já existia milhares de anos antes de Arquimedes. A contribuição dele foi outra: ele descobriu os princípios matemáticos da alavanca e inventou a roldana composta, um sistema com várias roldanas que multiplica a força!",
+            "Não é essa! O domínio do fogo é muito mais antigo que Arquimedes. Ele contribuiu para a mecânica: descobriu os princípios da alavanca (por isso a frase 'Dê-me um ponto de apoio e moverei o mundo!') e inventou a roldana composta!",
+            "Correto! Arquimedes calculou matematicamente como a alavanca multiplica a força e inventou a roldana composta — um sistema com várias roldanas que, conta a lenda, permitiu que ele sozinho puxasse um navio para fora da água!",
+            "Não é essa! As pirâmides foram construídas no Egito, mais de 2.000 anos antes de Arquimedes. Ele viveu na Grécia e sua contribuição foi outra: descobrir os princípios da alavanca e inventar a roldana composta, que multiplica a força!",
+          ]
+        },
+        { id: "p3q4", text: "O Parafuso de Arquimedes era usado para:", options: ["Cortar madeira", "Elevar água para irrigação", "Construir navios", "Fazer fogo"], answer: 1, hint: "Pense nas necessidades da agricultura antiga. A água dos rios ficava num nível mais baixo que as plantações. O que o parafuso espiral poderia fazer com a água?",
+          feedbacks: [
+            "Não é essa! Quem corta é a cunha, não o parafuso. O Parafuso de Arquimedes tinha outra função vital: ao girar sua espiral dentro de um tubo, ele elevava água de rios e canais até as plantações. Era uma ferramenta de irrigação!",
+            "Correto! O Parafuso de Arquimedes é um tubo com espiral interna: ao girar, a água sobe pela espiral e chega a um nível mais alto. Os gregos usavam isso para levar água dos rios até as plantações. Essa invenção ainda é usada hoje!",
+            "Não é essa! Embora Arquimedes tenha estudado navios (conta a lenda que puxou um usando roldanas), o Parafuso de Arquimedes tinha outra função: elevar água para irrigação, girando sua espiral para fazer a água subir até as plantações!",
+            "Não é essa! O Parafuso de Arquimedes não tinha relação com fogo. Sua função era elevar água: ao girar a espiral dentro de um tubo, a água subia de um nível baixo (rio) até um nível alto (plantação). Era essencial para a irrigação!",
+          ]
+        },
       ]
     },
     {
@@ -138,8 +339,22 @@ const PHASE3_DATA = {
       narrative: "O salto te leva a uma fábrica barulhenta na Inglaterra. Máquinas enormes funcionam com vapor, engrenagens giram e correias se movem sem parar!",
       teaching: "Na Revolução Industrial, as máquinas simples foram COMBINADAS para criar máquinas complexas! Engrenagens (rodas com eixo dentadas) transmitiam força de motores a vapor para teares e prensas. Sistemas de POLIAS (roldanas) moviam cargas em fábricas e minas. PARAFUSOS prendiam estruturas metálicas. A grande sacada? Toda máquina complexa é, no fundo, uma combinação inteligente de máquinas simples!",
       questions: [
-        { id: "p3q5", text: "O que aconteceu com as máquinas simples durante a Revolução Industrial?", options: ["Deixaram de ser usadas", "Foram substituídas por magia", "Foram combinadas para criar máquinas complexas", "Foram proibidas nas fábricas"], answer: 2 },
-        { id: "p3q6", text: "Engrenagens são, na verdade, um tipo de:", options: ["Cunha dentada", "Roda com eixo dentada", "Plano inclinado circular", "Roldana sólida"], answer: 1 },
+        { id: "p3q5", text: "O que aconteceu com as máquinas simples durante a Revolução Industrial?", options: ["Deixaram de ser usadas", "Foram substituídas por magia", "Foram combinadas para criar máquinas complexas", "Foram proibidas nas fábricas"], answer: 2, hint: "As fábricas tinham engrenagens, polias, parafusos... tudo junto. As máquinas simples desapareceram ou ganharam um novo papel?",
+          feedbacks: [
+            "Pelo contrário! As máquinas simples nunca deixaram de ser usadas. Na Revolução Industrial, elas ganharam ainda mais importância porque foram COMBINADAS para criar máquinas complexas como teares, prensas e locomotivas!",
+            "Não é isso! Não existe magia na engenharia — existe engenhosidade! As máquinas simples foram COMBINADAS de formas inteligentes para criar máquinas complexas. Engrenagens, polias e parafusos trabalhando juntos dentro de uma mesma máquina!",
+            "Exatamente! Essa é a grande sacada da Revolução Industrial: engrenagens (rodas com eixo dentadas), polias (roldanas) e parafusos foram combinados para criar máquinas poderosas como teares e locomotivas. Toda máquina complexa é uma combinação de simples!",
+            "Não é isso! As máquinas simples eram a BASE de tudo nas fábricas. Longe de serem proibidas, elas foram COMBINADAS para criar máquinas complexas. Engrenagens, polias e parafusos trabalhando juntos é o que movia a Revolução Industrial!",
+          ]
+        },
+        { id: "p3q6", text: "Engrenagens são, na verdade, um tipo de:", options: ["Cunha dentada", "Roda com eixo dentada", "Plano inclinado circular", "Roldana sólida"], answer: 1, hint: "A engrenagem é uma roda com dentes que gira em torno de um eixo. Que máquina simples também é uma roda que gira em torno de um eixo?",
+          feedbacks: [
+            "Não é essa! A cunha tem formato triangular e serve para cortar ou separar. A engrenagem é uma roda com dentes que gira em torno de um eixo, transmitindo força para outras engrenagens. Roda que gira no eixo é roda com eixo — neste caso, dentada!",
+            "Correto! A engrenagem é uma roda com eixo que ganhou dentes! Esses dentes permitem que uma roda transmita movimento e força para outra, criando sistemas mecânicos complexos. É a roda com eixo evoluída!",
+            "Não é essa! O plano inclinado é uma rampa, mesmo se imaginado em forma circular (isso seria um parafuso). A engrenagem funciona como uma roda com dentes girando em torno de um eixo, transmitindo força. É uma roda com eixo dentada!",
+            "Não é essa! A roldana usa corda passando por um sulco para mudar a direção da força. A engrenagem não tem corda nem sulco — ela tem dentes que se encaixam em outras engrenagens, transmitindo força. É uma roda com eixo dentada!",
+          ]
+        },
       ]
     },
     {
@@ -149,13 +364,30 @@ const PHASE3_DATA = {
       narrative: "Você retorna ao presente! A máquina do tempo te deixa bem no meio de uma escola. Olhe ao redor: mesmo aqui, cercado de tecnologia, as máquinas simples estão por toda parte. Vamos descobrir onde?",
       teaching: "Olhe para sua mesa na sala de aula: as máquinas simples estão bem aí! Quando você usa um APONTADOR para apontar o lápis, a lâmina dentro dele tem formato triangular — ela penetra a madeira e separa as aparas. Isso é uma CUNHA em ação! E a TESOURA que você usa para recortar trabalhos? Repare: as duas lâminas se cruzam em um ponto fixo (o parafusinho no meio). Quando você aperta as alças, a força se multiplica nas pontas. Isso é uma ALAVANCA! Você usa máquinas simples todos os dias na escola sem perceber!",
       questions: [
-        { id: "p3q7", text: "Na sala de aula, você usa o apontador para apontar o lápis. A lâmina do apontador tem formato triangular e corta a madeira separando as aparas. Que máquina simples é essa?", options: ["Alavanca", "Roldana", "Cunha", "Roda com eixo"], answer: 2 },
-        { id: "p3q8", text: "Para recortar uma atividade impressa, você usa a tesoura. As duas lâminas giram em torno de um ponto fixo no centro, multiplicando a força que você faz nas alças. Que máquina simples é a tesoura?", options: ["Cunha", "Plano inclinado", "Parafuso", "Alavanca"], answer: 3 },
+        { id: "p3q7", text: "Na sala de aula, você usa o apontador para apontar o lápis. A lâmina do apontador tem formato triangular e corta a madeira separando as aparas. Que máquina simples é essa?", options: ["Alavanca", "Roldana", "Cunha", "Roda com eixo"], answer: 2, hint: "A lâmina penetra a madeira e separa as aparas para os lados. Que máquina simples tem formato triangular e separa materiais?",
+          feedbacks: [
+            "Não é essa! A alavanca usa ponto de apoio e barra para multiplicar força. A lâmina do apontador funciona de outro modo: seu formato triangular penetra a madeira e separa as aparas para os lados. Formato triangular que separa é cunha!",
+            "Não é essa! A roldana é uma roda com corda. A lâmina do apontador funciona de forma completamente diferente: ela tem formato triangular que penetra a madeira e separa as aparas. Isso é uma cunha!",
+            "Correto! A lâmina do apontador é uma cunha: tem formato triangular que, ao pressionar contra o lápis, penetra a madeira e separa as aparas para os lados. Você usa uma cunha toda vez que aponta o lápis!",
+            "Não é essa! A roda com eixo gira para amplificar movimento. A lâmina do apontador não funciona assim — ela tem formato triangular que penetra e separa a madeira. Isso é uma cunha!",
+          ]
+        },
+        { id: "p3q8", text: "Para recortar uma atividade impressa, você usa a tesoura. As duas lâminas giram em torno de um ponto fixo no centro, multiplicando a força que você faz nas alças. Que máquina simples é a tesoura?", options: ["Cunha", "Plano inclinado", "Parafuso", "Alavanca"], answer: 3, hint: "Duas barras girando em torno de um ponto fixo, multiplicando a força... que máquina simples funciona assim?",
+          feedbacks: [
+            "Quase! As lâminas da tesoura até têm formato de cunha para cortar, mas o princípio principal é outro: duas lâminas giram em torno de um ponto fixo central (fulcro), multiplicando a força das alças nas pontas. Isso é uma alavanca!",
+            "Não é essa! O plano inclinado é uma rampa. A tesoura funciona com duas lâminas que giram em torno de um ponto fixo no centro, multiplicando a força. Barras girando em torno de um ponto de apoio é o princípio da alavanca!",
+            "Não é essa! A tesoura tem um parafusinho no centro, mas ele não funciona como um parafuso — ele serve como ponto de apoio fixo (fulcro) para as duas lâminas girarem e multiplicarem a força. Esse princípio é o da alavanca!",
+            "Isso mesmo! A tesoura é uma alavanca dupla: o parafusinho no centro é o ponto de apoio (fulcro), suas mãos fazem força nas alças e essa força se multiplica nas pontas das lâminas. Alavanca que você usa quase todo dia!",
+          ]
+        },
       ]
     },
   ],
   timeline: {
     instruction: "Organize os eventos na ordem cronológica correta!",
+    hint: "Pense na sua viagem: qual civilização você visitou primeiro? E por último?",
+    feedbackCorrect: "✅ Ordem perfeita! Você dominou a linha do tempo: das pirâmides egípcias à Grécia de Arquimedes, das fábricas da Revolução Industrial até o seu dia a dia na escola!",
+    feedbackWrong: "❌ A ordem correta é: Egito Antigo → Grécia Antiga → Revolução Industrial → Atualidade. Lembre-se da sequência da viagem: primeiro as pirâmides (2500 a.C.), depois Arquimedes (250 a.C.), depois as fábricas (1800) e finalmente a escola de hoje!",
     items: [
       { id: "t1", text: "Egípcios usam rampas para construir pirâmides", order: 1 },
       { id: "t2", text: "Arquimedes descobre os princípios da alavanca", order: 2 },
@@ -175,6 +407,7 @@ const PHASE4_DATA = {
       "\"Vamos DESMONTAR algumas máquinas para provar isso?\""
     ]
   },
+  transition: "Brilhante! Você desmontou máquinas complexas e encontrou as simples escondidas dentro delas. Agora sabe que por trás de toda engenharia existe uma combinação inteligente de princípios básicos. A máquina do tempo está quase pronta! Falta apenas uma peça: uma engenhoca ORIGINAL, criada por VOCÊ. Chegou a hora de se tornar inventor!",
   teaching: {
     title: "De Simples a Complexo",
     text: "Uma máquina complexa combina duas ou mais máquinas simples trabalhando juntas. Veja exemplos:",
@@ -187,16 +420,86 @@ const PHASE4_DATA = {
     ]
   },
   questions: [
-    { id: "p4q1", text: "Quais máquinas simples estão presentes em uma BICICLETA?", options: ["Apenas roldana", "Roda com eixo + alavanca + engrenagens", "Apenas plano inclinado", "Cunha + parafuso"], answer: 1, explanation: "As rodas são rodas com eixo, os freios e pedais são alavancas, e as catracas são engrenagens (rodas com eixo dentadas)!" },
-    { id: "p4q2", text: "Um abridor de latas combina:", options: ["Cunha (lâmina cortante) + roda com eixo (girador)", "Apenas roldana", "Plano inclinado + parafuso", "Apenas alavanca"], answer: 0, explanation: "A lâmina que corta a lata é uma cunha, e a parte que gira é uma roda com eixo!" },
-    { id: "p4q3", text: "Se retirarmos o sistema de ROLDANAS de um guindaste, o que acontece?", options: ["Nada muda", "Ele não consegue mais mudar a direção da força nem multiplicá-la para levantar cargas pesadas", "Ele fica mais forte", "Ele se transforma em uma alavanca"], answer: 1, explanation: "Sem as roldanas, o guindaste perde a capacidade de redirecionar e multiplicar a força. Cada peça é essencial!" },
-    { id: "p4q4", text: "Qual máquina simples está ESCONDIDA dentro de um parafuso de uma estante?", options: ["Roldana", "Alavanca", "Plano inclinado (em espiral)", "Roda com eixo"], answer: 2, explanation: "Lembre-se: o parafuso É um plano inclinado enrolado! Cada volta da rosca é como subir uma rampa em espiral." },
-    { id: "p4q5", text: "Uma tesoura de podar combina quais máquinas simples?", options: ["Roldana + plano inclinado", "Alavanca + cunha", "Parafuso + roda com eixo", "Apenas cunha"], answer: 1, explanation: "O cabo funciona como alavanca (multiplica a força) e as lâminas são cunhas (cortam separando o material)!" },
-    { id: "p4q6", text: "Um carrinho de mão é uma máquina complexa que combina:", options: ["Roldana + cunha", "Alavanca + roda com eixo", "Apenas plano inclinado", "Parafuso + roldana"], answer: 1, explanation: "A caçamba e as alças formam uma alavanca, e a roda na frente é uma roda com eixo que reduz o atrito!" },
-    { id: "p4q7", text: "Qual afirmação sobre máquinas complexas é VERDADEIRA?", options: ["São totalmente diferentes das máquinas simples", "São combinações inteligentes de máquinas simples", "Não usam princípios de física", "Surgiram antes das máquinas simples"], answer: 1 },
-    { id: "p4q8", text: "Dadas as máquinas simples ROLDANA + ALAVANCA + RODA COM EIXO, qual dispositivo elas podem formar?", options: ["Uma faca", "Um guindaste", "Um prego", "Uma rampa"], answer: 1, explanation: "O guindaste usa roldanas para os cabos, alavanca no braço mecânico e roda com eixo na base giratória!" },
-    { id: "p4q9", text: "Um macaco de carro é usado para levantar veículos pesados. Quais máquinas simples ele combina?", options: ["Roldana + cunha", "Plano inclinado + roda com eixo", "Parafuso + alavanca", "Apenas roldana"], answer: 2, explanation: "A rosca central é um parafuso (plano inclinado em espiral) e a manivela que você gira funciona como alavanca, multiplicando sua força para erguer o carro!" },
-    { id: "p4q10", text: "Uma furadeira elétrica combina quais máquinas simples na sua broca?", options: ["Roldana + alavanca", "Cunha (ponta cortante) + parafuso (espiral da broca)", "Apenas roda com eixo", "Plano inclinado + roldana"], answer: 1, explanation: "A ponta da broca é uma cunha que penetra o material, e o corpo espiral da broca é um parafuso que expulsa os resíduos enquanto gira!" },
+    { id: "p4q1", text: "Quais máquinas simples estão presentes em uma BICICLETA?", options: ["Apenas roldana", "Roda com eixo + alavanca + engrenagens", "Apenas plano inclinado", "Cunha + parafuso"], answer: 1, hint: "Pense nas três partes principais: as rodas, os freios/pedais e a corrente com catracas. Que máquinas simples se escondem em cada uma?",
+      feedbacks: [
+        "Não é essa! A bicicleta não usa roldanas. Ela combina TRÊS máquinas simples: as rodas são rodas com eixo, os freios e pedais são alavancas, e as catracas são engrenagens (rodas com eixo dentadas). É uma máquina complexa completa!",
+        "Perfeito! As rodas são rodas com eixo, os freios e pedais são alavancas, e as catracas são engrenagens (rodas com eixo dentadas). A bicicleta é um ótimo exemplo de máquina complexa: três máquinas simples trabalhando juntas!",
+        "Não é essa! A bicicleta não funciona por plano inclinado. Ela combina três máquinas simples diferentes: roda com eixo (nas rodas), alavanca (nos freios e pedais) e engrenagens (na corrente e catracas)!",
+        "Não é essa! Cunha serve para cortar e parafuso para fixar — nenhum dos dois é o princípio principal da bicicleta. Ela combina roda com eixo (rodas), alavanca (freios e pedais) e engrenagens (corrente e catracas)!",
+      ]
+    },
+    { id: "p4q2", text: "Um abridor de latas combina:", options: ["Cunha (lâmina cortante) + roda com eixo (girador)", "Apenas roldana", "Plano inclinado + parafuso", "Apenas alavanca"], answer: 0, hint: "O abridor tem duas partes que fazem coisas diferentes: uma parte corta a lata e outra parte você gira. Que máquinas simples fazem essas funções?",
+      feedbacks: [
+        "Correto! A lâmina que corta a lata é uma cunha (formato triangular que separa o metal) e a parte que gira é uma roda com eixo (sua força no girador se amplifica na lâmina). Duas máquinas simples em um objeto pequeno!",
+        "Não é essa! O abridor de latas não usa roldana (não tem corda). Ele combina duas máquinas simples: a lâmina cortante é uma cunha que separa o metal, e o girador é uma roda com eixo que amplifica sua força!",
+        "Não é essa! O abridor não funciona por rampa nem por espiral. Suas duas máquinas simples são: a cunha (lâmina triangular que corta o metal) e a roda com eixo (girador que amplifica a força da sua mão)!",
+        "Não é essa! Embora alguns abridores tenham um cabo que funciona como alavanca, o princípio central combina duas máquinas: a cunha (lâmina cortante que separa o metal) e a roda com eixo (girador que você roda para avançar a lâmina)!",
+      ]
+    },
+    { id: "p4q3", text: "Se retirarmos o sistema de ROLDANAS de um guindaste, o que acontece?", options: ["Nada muda", "Ele não consegue mais mudar a direção da força nem multiplicá-la para levantar cargas pesadas", "Ele fica mais forte", "Ele se transforma em uma alavanca"], answer: 1, hint: "As roldanas do guindaste têm duas funções: mudar a direção da força e multiplicá-la. Sem elas, o que o guindaste perde?",
+      feedbacks: [
+        "Não é isso! As roldanas são essenciais para o guindaste. Sem elas, o guindaste perde a capacidade de mudar a direção da força e de multiplicá-la. Seria impossível levantar cargas pesadas. Cada peça de uma máquina complexa tem função!",
+        "Exatamente! As roldanas são o coração do sistema de elevação do guindaste: mudam a direção da força (puxar para baixo = carga sobe) e a multiplicam. Sem elas, o guindaste não consegue erguer cargas pesadas. Cada peça é essencial!",
+        "Pelo contrário! Sem as roldanas, o guindaste fica mais FRACO. As roldanas são justamente o que permite mudar a direção da força e multiplicá-la para erguer cargas pesadas. Remover uma máquina simples enfraquece a máquina complexa!",
+        "Não é isso! O braço do guindaste já funciona como alavanca, com ou sem roldanas. Mas sem as roldanas, ele perde a capacidade de mudar a direção da força e multiplicá-la nos cabos. O guindaste precisa das DUAS máquinas simples trabalhando juntas!",
+      ]
+    },
+    { id: "p4q4", text: "Qual máquina simples está ESCONDIDA dentro de um parafuso de uma estante?", options: ["Roldana", "Alavanca", "Plano inclinado (em espiral)", "Roda com eixo"], answer: 2, hint: "Lembre-se do que aprendemos na Fase 2: se você 'desenrolasse' a rosca do parafuso, que forma apareceria?",
+      feedbacks: [
+        "Não é essa! A roldana é uma roda com corda. O parafuso não tem corda — ele tem uma rosca em espiral. E se você desenrolar essa espiral, verá um plano inclinado! O parafuso é um plano inclinado enrolado!",
+        "Não é essa! A alavanca usa ponto de apoio e barra. O parafuso funciona por outro princípio: sua rosca é uma espiral, e se você a desenrolar mentalmente, verá que é um plano inclinado enrolado!",
+        "Correto! Lembre-se: o parafuso É um plano inclinado enrolado! Cada volta da rosca é como subir uma rampa em espiral. É por isso que, ao girar, o parafuso avança em linha reta e se fixa na madeira!",
+        "Não é essa! Embora você gire o parafuso, o princípio não é o da roda com eixo. O segredo está na rosca: ela é um plano inclinado enrolado em espiral. Cada volta da rosca é como uma rampa que converte giro em avanço linear!",
+      ]
+    },
+    { id: "p4q5", text: "Uma tesoura de podar combina quais máquinas simples?", options: ["Roldana + plano inclinado", "Alavanca + cunha", "Parafuso + roda com eixo", "Apenas cunha"], answer: 1, hint: "A tesoura de podar tem duas partes funcionais: o cabo que multiplica sua força e as lâminas que cortam. Que máquinas simples correspondem a cada parte?",
+      feedbacks: [
+        "Não é essa! A tesoura de podar não usa corda (roldana) nem rampa (plano inclinado). Suas duas máquinas simples são: o cabo funciona como alavanca (multiplica a força a partir do ponto de apoio) e as lâminas são cunhas (formato triangular que corta separando o material)!",
+        "Perfeito! O cabo funciona como alavanca: o ponto de apoio no centro multiplica a força que você faz nas alças. E as lâminas são cunhas: formato triangular que separa o galho ao cortar. Duas máquinas simples, um corte poderoso!",
+        "Não é essa! O parafusinho central da tesoura é apenas o ponto de apoio, não funciona como parafuso. O princípio é outro: o cabo é uma alavanca que multiplica força, e as lâminas são cunhas que cortam. Alavanca + cunha!",
+        "Quase! As lâminas realmente são cunhas, mas a tesoura de podar não é SÓ cunha. O cabo funciona como alavanca: o ponto de apoio no centro multiplica a força que você faz nas alças, e essa força ampliada chega às lâminas (cunhas). São DUAS máquinas simples!",
+      ]
+    },
+    { id: "p4q6", text: "Um carrinho de mão é uma máquina complexa que combina:", options: ["Roldana + cunha", "Alavanca + roda com eixo", "Apenas plano inclinado", "Parafuso + roldana"], answer: 1, hint: "O carrinho de mão tem duas partes que facilitam o trabalho: as alças que você levanta e a roda na frente. Que máquinas simples são essas?",
+      feedbacks: [
+        "Não é essa! O carrinho de mão não usa corda (roldana) nem corta nada (cunha). Ele combina: alavanca (a caçamba e as alças formam uma barra que gira em torno da roda como ponto de apoio) + roda com eixo (a roda na frente reduz o atrito e facilita o deslocamento)!",
+        "Correto! A caçamba e as alças formam uma alavanca: a roda na frente é o ponto de apoio (fulcro), a carga fica no meio e você aplica força nas alças. E a roda é uma roda com eixo que reduz o atrito. Duas máquinas simples facilitando o trabalho pesado!",
+        "Não é essa! O carrinho de mão não funciona como rampa. Ele combina duas máquinas simples: a caçamba com alças é uma alavanca (a roda serve de ponto de apoio) e a roda na frente é uma roda com eixo que reduz o atrito!",
+        "Não é essa! O carrinho de mão não usa espiral (parafuso) nem corda (roldana). Suas máquinas simples são: alavanca (alças + caçamba girando em torno da roda como fulcro) e roda com eixo (a roda que facilita o deslocamento reduzindo o atrito)!",
+      ]
+    },
+    { id: "p4q7", text: "Qual afirmação sobre máquinas complexas é VERDADEIRA?", options: ["São totalmente diferentes das máquinas simples", "São combinações inteligentes de máquinas simples", "Não usam princípios de física", "Surgiram antes das máquinas simples"], answer: 1, hint: "Pense em tudo que você viu nesta fase: bicicleta, guindaste, tesoura de podar... o que todas essas máquinas complexas têm em comum?",
+      feedbacks: [
+        "Pelo contrário! As máquinas complexas são FEITAS de máquinas simples. Toda máquina complexa, por mais sofisticada que pareça, é uma combinação inteligente de alavancas, planos inclinados, cunhas, parafusos, roldanas e rodas com eixo!",
+        "Exatamente! Essa é a grande lição desta fase: toda máquina complexa — de uma tesoura de podar a um guindaste — é uma combinação inteligente de máquinas simples trabalhando juntas. A genialidade está em como combiná-las!",
+        "Não é isso! As máquinas complexas usam TODOS os princípios de física das máquinas simples. Elas são justamente combinações inteligentes de alavancas, cunhas, roldanas e outras máquinas simples, cada uma aplicando seus princípios!",
+        "É o contrário! As máquinas simples vieram primeiro — o ser humano as usa há milhares de anos. As máquinas complexas surgiram depois, quando aprendemos a COMBINAR as simples para resolver problemas maiores!",
+      ]
+    },
+    { id: "p4q8", text: "Dadas as máquinas simples ROLDANA + ALAVANCA + RODA COM EIXO, qual dispositivo elas podem formar?", options: ["Uma faca", "Um guindaste", "Um prego", "Uma rampa"], answer: 1, hint: "Pense em um dispositivo grande usado na construção civil. Ele tem cabos com rodas (roldana), um braço mecânico (alavanca) e uma base que gira (roda com eixo).",
+      feedbacks: [
+        "Não é essa! A faca é uma cunha simples — não usa roldana, alavanca nem roda com eixo. O dispositivo que combina essas três máquinas é o guindaste: roldanas nos cabos, alavanca no braço e roda com eixo na base giratória!",
+        "Correto! O guindaste combina exatamente essas três: roldanas no sistema de cabos (mudam direção e multiplicam força), alavanca no braço mecânico (alcança longe) e roda com eixo na base giratória (permite girar). Máquina complexa perfeita!",
+        "Não é essa! O prego é apenas uma cunha simples. O dispositivo que combina roldana + alavanca + roda com eixo é o guindaste: roldanas nos cabos, alavanca no braço e roda com eixo na base giratória!",
+        "Não é essa! A rampa é apenas um plano inclinado simples. O dispositivo que combina roldana + alavanca + roda com eixo é o guindaste: roldanas nos cabos para erguer cargas, alavanca no braço e roda com eixo na base giratória!",
+      ]
+    },
+    { id: "p4q9", text: "Um macaco de carro é usado para levantar veículos pesados. Quais máquinas simples ele combina?", options: ["Roldana + cunha", "Plano inclinado + roda com eixo", "Parafuso + alavanca", "Apenas roldana"], answer: 2, hint: "O macaco tem duas partes: uma rosca central que você gira e uma manivela que aciona o mecanismo. Que máquinas simples são essas?",
+      feedbacks: [
+        "Não é essa! O macaco de carro não usa corda (roldana) nem corta nada (cunha). Ele combina: parafuso (a rosca central é um plano inclinado em espiral que converte giro em elevação) + alavanca (a manivela multiplica a força que você faz para girar)!",
+        "Quase! Você pensou no caminho certo, porque o parafuso é um plano inclinado em espiral. Mas a forma como ele aparece no macaco é como parafuso (rosca), e a outra máquina simples é a alavanca (manivela que multiplica sua força). Parafuso + alavanca!",
+        "Perfeito! A rosca central do macaco é um parafuso: plano inclinado em espiral que converte seu giro em elevação. E a manivela é uma alavanca que multiplica a força da sua mão. Resultado: você gira com pouca força e o carro sobe!",
+        "Não é essa! O macaco de carro não usa roldana (não tem corda). Ele combina duas máquinas simples: o parafuso (rosca central que converte giro em elevação) e a alavanca (manivela que multiplica a força). Juntas, permitem erguer um carro inteiro!",
+      ]
+    },
+    { id: "p4q10", text: "Uma furadeira elétrica combina quais máquinas simples na sua broca?", options: ["Roldana + alavanca", "Cunha (ponta cortante) + parafuso (espiral da broca)", "Apenas roda com eixo", "Plano inclinado + roldana"], answer: 1, hint: "Observe a broca de perto: a ponta tem um formato que penetra o material, e o corpo tem um padrão em espiral que expulsa os resíduos. Que máquinas simples são essas?",
+      feedbacks: [
+        "Não é essa! A broca não usa corda (roldana) nem barra com ponto de apoio (alavanca). Olhe para a broca: a ponta cortante tem formato triangular (cunha) que penetra o material, e o corpo tem espiral (parafuso) que expulsa os resíduos enquanto gira!",
+        "Correto! A ponta da broca é uma cunha: formato triangular que penetra o material. E o corpo espiral é um parafuso: expulsa os resíduos enquanto gira, avançando no material. Duas máquinas simples girando juntas!",
+        "Não é essa! O motor da furadeira usa roda com eixo, mas a pergunta é sobre a BROCA. Nela, as máquinas simples são: cunha (ponta cortante que penetra o material) + parafuso (corpo em espiral que expulsa os resíduos enquanto avança)!",
+        "Não é essa! A broca não funciona como rampa nem usa corda. Suas máquinas simples são: a ponta cortante é uma cunha (formato triangular que penetra) e o corpo em espiral é um parafuso (expulsa resíduos enquanto gira e avança no material)!",
+      ]
+    },
   ]
 };
 
@@ -291,7 +594,7 @@ const styles = {
     minHeight: "100vh",
     background: `linear-gradient(170deg, ${COLORS.bg} 0%, #0f0d0a 50%, #1a1510 100%)`,
     color: COLORS.text,
-    fontFamily: "'Georgia', 'Times New Roman', serif",
+    fontFamily: "'Cinzel', 'Georgia', 'Times New Roman', serif",
     position: "relative",
     overflow: "hidden",
   },
@@ -499,6 +802,21 @@ const styles = {
   },
 };
 
+// --- HELPERS ---
+const REDUNDANT_PREFIXES = [
+  "Não é essa! ", "Não é isso! ", "Pelo contrário! ", "É o contrário! ",
+  "Isso mesmo! ", "Perfeito! ", "Correto! ", "Exatamente! ", "Excelente! ",
+];
+function stripPrefix(text) {
+  if (!text) return "";
+  for (const p of REDUNDANT_PREFIXES) {
+    if (text.startsWith(p)) return text.slice(p.length);
+  }
+  return text;
+}
+
+// --- COMPONENTS ---
+
 function GearBg() {
   return (
     <>
@@ -632,15 +950,14 @@ function Phase1({ onComplete }) {
       setShowResult(false);
       setShowHint(false);
     } else {
-      setStep("result");
+      setStep("transition");
     }
   };
 
   const isCorrect = selected === q?.answer;
   const getFeedback = () => {
-    const fb = PHASE1_DATA.feedback;
-    if (isCorrect) return fb.correct[Math.floor(Math.random() * fb.correct.length)];
-    return fb.wrong[Math.floor(Math.random() * fb.wrong.length)];
+    if (!selected || !q?.feedbacks) return "";
+    return stripPrefix(q.feedbacks[selected] || "");
   };
 
   const getStars = () => {
@@ -653,6 +970,10 @@ function Phase1({ onComplete }) {
 
   if (step === "intro") {
     return <NarrativeScreen lines={PHASE1_DATA.intro.narrative} onContinue={() => setStep("teaching")} buttonText="Ver as Máquinas Simples 📖" />;
+  }
+
+  if (step === "transition") {
+    return <NarrativeScreen lines={[PHASE1_DATA.transition]} onContinue={() => setStep("result")} buttonText="Ver Resultado ★" />;
   }
 
   if (step === "teaching") {
@@ -697,10 +1018,10 @@ function Phase1({ onComplete }) {
             if (showResult && key === q.answer) { borderColor = COLORS.success; bg = COLORS.successBg; }
             if (showResult && selected === key && key !== q.answer) { borderColor = COLORS.error; bg = COLORS.errorBg; }
             return (
-              <div key={key} onClick={() => handleSelect(key)} style={{ ...styles.machineCard(false), borderColor, background: bg, cursor: showResult ? "default" : "pointer" }}>
+              <button key={key} onClick={() => handleSelect(key)} disabled={showResult} aria-label={`Selecionar ${m.name}`} aria-pressed={selected === key} style={{ ...styles.machineCard(false), borderColor, background: bg, cursor: showResult ? "default" : "pointer", fontFamily: "inherit" }}>
                 <div style={{ fontSize: 24 }}>{m.icon}</div>
                 <div style={{ fontSize: 13, fontWeight: "bold", color: selected === key ? COLORS.accentLight : COLORS.text }}>{m.name}</div>
-              </div>
+              </button>
             );
           })}
         </div>
@@ -720,11 +1041,11 @@ function Phase1({ onComplete }) {
         )}
 
         {showResult && (
-          <div style={{ background: isCorrect ? COLORS.successBg : COLORS.errorBg, border: `1px solid ${isCorrect ? COLORS.success : COLORS.error}44`, borderRadius: 10, padding: 14, marginBottom: 12 }}>
+          <div role="alert" style={{ background: isCorrect ? COLORS.successBg : COLORS.errorBg, border: `1px solid ${isCorrect ? COLORS.success : COLORS.error}44`, borderRadius: 10, padding: 14, marginBottom: 12 }}>
             <p style={{ margin: 0, color: isCorrect ? COLORS.success : COLORS.error, fontWeight: "bold", marginBottom: 4 }}>
               {isCorrect ? "✅ Correto!" : `❌ Não foi dessa vez! Era: ${SIMPLE_MACHINES[q.answer].name}`}
             </p>
-            <p style={{ margin: 0, fontSize: 14, color: COLORS.textDim, fontStyle: "italic" }}>{getFeedback()}</p>
+            <p style={{ margin: 0, fontSize: 14, color: COLORS.textDim, lineHeight: 1.6 }}>{getFeedback()}</p>
           </div>
         )}
 
@@ -752,6 +1073,7 @@ function Phase2({ onComplete }) {
   const [showResult, setShowResult] = useState(false);
   const [score, setScore] = useState(0);
   const [cardIndex, setCardIndex] = useState(0);
+  const [showHint, setShowHint] = useState(false);
 
   const questions = PHASE2_DATA.questions;
   const q = questions[qIndex];
@@ -773,12 +1095,19 @@ function Phase2({ onComplete }) {
       setQIndex(i => i + 1);
       setSelected(null);
       setShowResult(false);
+      setShowHint(false);
     } else {
-      setStep("result");
+      setStep("transition");
     }
   };
 
   const isCorrect = q ? (q.type === "trueFalse" ? selected === q.answer : selected === q.answer) : false;
+
+  const getFeedback = () => {
+    if (!q || selected === null || !q.feedbacks) return "";
+    if (q.type === "trueFalse") return stripPrefix(q.feedbacks[String(selected)] || "");
+    return stripPrefix(q.feedbacks[selected] || "");
+  };
 
   const getStars = () => {
     const pct = score / questions.length;
@@ -790,6 +1119,10 @@ function Phase2({ onComplete }) {
 
   if (step === "intro") {
     return <NarrativeScreen lines={PHASE2_DATA.intro.narrative} onContinue={() => setStep("teaching")} buttonText="Estudar o Diário 📖" />;
+  }
+
+  if (step === "transition") {
+    return <NarrativeScreen lines={[PHASE2_DATA.transition]} onContinue={() => setStep("result")} buttonText="Ver Resultado ★" />;
   }
 
   if (step === "teaching") {
@@ -866,12 +1199,26 @@ function Phase2({ onComplete }) {
           </div>
         )}
 
+        {!showResult && !showHint && q.hint && (
+          <div style={{ marginBottom: 12, textAlign: "center" }}>
+            <button onClick={() => setShowHint(true)} style={{ background: "none", border: `1px solid ${COLORS.accentDim}44`, borderRadius: 8, padding: "8px 16px", color: COLORS.accentLight, fontSize: 13, cursor: "pointer", fontFamily: "inherit" }}>
+              💡 Preciso de uma dica!
+            </button>
+          </div>
+        )}
+
+        {!showResult && showHint && q.hint && (
+          <div style={{ background: COLORS.accent + "11", border: `1px solid ${COLORS.accentDim}44`, borderRadius: 10, padding: 12, marginBottom: 12 }}>
+            <span style={{ fontSize: 13, color: COLORS.accentLight }}>💡 Dica do Mestre: {q.hint}</span>
+          </div>
+        )}
+
         {showResult && (
-          <div style={{ background: isCorrect ? COLORS.successBg : COLORS.errorBg, border: `1px solid ${isCorrect ? COLORS.success : COLORS.error}44`, borderRadius: 10, padding: 14, marginBottom: 12 }}>
+          <div role="alert" style={{ background: isCorrect ? COLORS.successBg : COLORS.errorBg, border: `1px solid ${isCorrect ? COLORS.success : COLORS.error}44`, borderRadius: 10, padding: 14, marginBottom: 12 }}>
             <p style={{ margin: 0, color: isCorrect ? COLORS.success : COLORS.error, fontWeight: "bold", marginBottom: 4 }}>
               {isCorrect ? "✅ Correto!" : "❌ Não foi dessa vez!"}
             </p>
-            {q.explanation && <p style={{ margin: 0, fontSize: 14, color: COLORS.textDim, fontStyle: "italic" }}>{q.explanation}</p>}
+            <p style={{ margin: 0, fontSize: 14, color: COLORS.textDim, lineHeight: 1.6 }}>{getFeedback()}</p>
           </div>
         )}
 
@@ -898,6 +1245,8 @@ function Phase3({ onComplete }) {
   const [score, setScore] = useState(0);
   const [timelineOrder, setTimelineOrder] = useState([3, 1, 0, 2]); // shuffled
   const [timelineSubmitted, setTimelineSubmitted] = useState(false);
+  const [showHint, setShowHint] = useState(false);
+  const [showTimelineHint, setShowTimelineHint] = useState(false);
 
   const periods = PHASE3_DATA.periods;
   const period = periods[periodIdx];
@@ -913,9 +1262,9 @@ function Phase3({ onComplete }) {
 
   const handleNext = () => {
     if (qLocalIdx < period.questions.length - 1) {
-      setQLocalIdx(i => i + 1); setSelected(null); setShowResult(false);
+      setQLocalIdx(i => i + 1); setSelected(null); setShowResult(false); setShowHint(false);
     } else if (periodIdx < periods.length - 1) {
-      setPeriodIdx(i => i + 1); setQLocalIdx(0); setSelected(null); setShowResult(false); setSubStep("narrative");
+      setPeriodIdx(i => i + 1); setQLocalIdx(0); setSelected(null); setShowResult(false); setShowHint(false); setSubStep("narrative");
     } else {
       setStep("timeline");
     }
@@ -961,16 +1310,31 @@ function Phase3({ onComplete }) {
             <span style={{ flex: 1, color: COLORS.text }}>{items[tIdx].text}</span>
             {!timelineSubmitted && (
               <div style={{ display: "flex", flexDirection: "column", gap: 2 }}>
-                <button onClick={() => moveTimeline(pos, -1)} style={{ background: "none", border: "none", color: COLORS.accent, cursor: "pointer", fontSize: 16, padding: 2 }}>▲</button>
-                <button onClick={() => moveTimeline(pos, 1)} style={{ background: "none", border: "none", color: COLORS.accent, cursor: "pointer", fontSize: 16, padding: 2 }}>▼</button>
+                <button onClick={() => moveTimeline(pos, -1)} aria-label={`Mover "${items[tIdx].text}" para cima`} style={{ background: "none", border: "none", color: COLORS.accent, cursor: "pointer", fontSize: 16, padding: 2 }}>▲</button>
+                <button onClick={() => moveTimeline(pos, 1)} aria-label={`Mover "${items[tIdx].text}" para baixo`} style={{ background: "none", border: "none", color: COLORS.accent, cursor: "pointer", fontSize: 16, padding: 2 }}>▼</button>
               </div>
             )}
           </div>
         ))}
+
+        {!timelineSubmitted && !showTimelineHint && PHASE3_DATA.timeline.hint && (
+          <div style={{ marginTop: 12, marginBottom: 4, textAlign: "center" }}>
+            <button onClick={() => setShowTimelineHint(true)} style={{ background: "none", border: `1px solid ${COLORS.accentDim}44`, borderRadius: 8, padding: "8px 16px", color: COLORS.accentLight, fontSize: 13, cursor: "pointer", fontFamily: "inherit" }}>
+              💡 Preciso de uma dica!
+            </button>
+          </div>
+        )}
+
+        {!timelineSubmitted && showTimelineHint && PHASE3_DATA.timeline.hint && (
+          <div style={{ background: COLORS.accent + "11", border: `1px solid ${COLORS.accentDim}44`, borderRadius: 10, padding: 12, marginTop: 12, marginBottom: 4 }}>
+            <span style={{ fontSize: 13, color: COLORS.accentLight }}>💡 Dica do Mestre: {PHASE3_DATA.timeline.hint}</span>
+          </div>
+        )}
+
         {timelineSubmitted && (
-          <div style={{ background: isCorrect ? COLORS.successBg : COLORS.errorBg, borderRadius: 10, padding: 12, marginTop: 12, border: `1px solid ${isCorrect ? COLORS.success : COLORS.error}44` }}>
+          <div role="alert" style={{ background: isCorrect ? COLORS.successBg : COLORS.errorBg, borderRadius: 10, padding: 14, marginTop: 12, border: `1px solid ${isCorrect ? COLORS.success : COLORS.error}44` }}>
             <p style={{ margin: 0, color: isCorrect ? COLORS.success : COLORS.error, fontWeight: "bold" }}>
-              {isCorrect ? "✅ Ordem perfeita! Você dominou a linha do tempo!" : "❌ A ordem correta é: Egito → Grécia → Revolução Industrial → Atualidade"}
+              {isCorrect ? PHASE3_DATA.timeline.feedbackCorrect : PHASE3_DATA.timeline.feedbackWrong}
             </p>
           </div>
         )}
@@ -978,11 +1342,15 @@ function Phase3({ onComplete }) {
           {!timelineSubmitted ? (
             <button style={styles.button("primary")} onClick={checkTimeline}>Confirmar Ordem ✓</button>
           ) : (
-            <button style={styles.button("primary")} onClick={() => setStep("result")}>Ver Resultado ★</button>
+            <button style={styles.button("primary")} onClick={() => setStep("transition")}>Ver Resultado ★</button>
           )}
         </div>
       </div>
     );
+  }
+
+  if (step === "transition") {
+    return <NarrativeScreen lines={[PHASE3_DATA.transition]} onContinue={() => setStep("result")} buttonText="Ver Resultado ★" />;
   }
 
   if (step === "result") {
@@ -1035,11 +1403,27 @@ function Phase3({ onComplete }) {
             {String.fromCharCode(65 + i)}) {opt}
           </button>
         ))}
+
+        {!showResult && !showHint && q.hint && (
+          <div style={{ marginBottom: 12, marginTop: 8, textAlign: "center" }}>
+            <button onClick={() => setShowHint(true)} style={{ background: "none", border: `1px solid ${COLORS.accentDim}44`, borderRadius: 8, padding: "8px 16px", color: COLORS.accentLight, fontSize: 13, cursor: "pointer", fontFamily: "inherit" }}>
+              💡 Preciso de uma dica!
+            </button>
+          </div>
+        )}
+
+        {!showResult && showHint && q.hint && (
+          <div style={{ background: COLORS.accent + "11", border: `1px solid ${COLORS.accentDim}44`, borderRadius: 10, padding: 12, marginBottom: 12, marginTop: 8 }}>
+            <span style={{ fontSize: 13, color: COLORS.accentLight }}>💡 Dica do Mestre: {q.hint}</span>
+          </div>
+        )}
+
         {showResult && (
-          <div style={{ background: isCorrect ? COLORS.successBg : COLORS.errorBg, borderRadius: 10, padding: 12, marginTop: 8, border: `1px solid ${isCorrect ? COLORS.success : COLORS.error}44` }}>
-            <p style={{ margin: 0, color: isCorrect ? COLORS.success : COLORS.error, fontWeight: "bold" }}>
-              {isCorrect ? "✅ Correto!" : `❌ Resposta: ${q.options[q.answer]}`}
+          <div role="alert" style={{ background: isCorrect ? COLORS.successBg : COLORS.errorBg, borderRadius: 10, padding: 14, marginTop: 8, border: `1px solid ${isCorrect ? COLORS.success : COLORS.error}44` }}>
+            <p style={{ margin: 0, color: isCorrect ? COLORS.success : COLORS.error, fontWeight: "bold", marginBottom: 4 }}>
+              {isCorrect ? "✅ Correto!" : "❌ Não foi dessa vez!"}
             </p>
+            {q.feedbacks && selected !== null && <p style={{ margin: 0, fontSize: 14, color: COLORS.textDim, lineHeight: 1.6 }}>{stripPrefix(q.feedbacks[selected])}</p>}
           </div>
         )}
         <div style={{ textAlign: "right", marginTop: 12 }}>
@@ -1063,6 +1447,7 @@ function Phase4({ onComplete }) {
   const [selected, setSelected] = useState(null);
   const [showResult, setShowResult] = useState(false);
   const [score, setScore] = useState(0);
+  const [showHint, setShowHint] = useState(false);
 
   const questions = PHASE4_DATA.questions;
   const q = questions[qIndex];
@@ -1074,14 +1459,18 @@ function Phase4({ onComplete }) {
     if (selected === q.answer) setScore(s => s + 1);
   };
   const handleNext = () => {
-    if (qIndex < questions.length - 1) { setQIndex(i => i + 1); setSelected(null); setShowResult(false); }
-    else setStep("result");
+    if (qIndex < questions.length - 1) { setQIndex(i => i + 1); setSelected(null); setShowResult(false); setShowHint(false); }
+    else setStep("transition");
   };
 
   const isCorrect = selected === q?.answer;
   const getStars = () => { const p = score / questions.length; return p >= 0.9 ? 3 : p >= 0.7 ? 2 : p >= 0.5 ? 1 : 0; };
 
   if (step === "intro") return <NarrativeScreen lines={PHASE4_DATA.intro.narrative} onContinue={() => setStep("teaching")} buttonText="Desmontar Máquinas! 🔧" />;
+
+  if (step === "transition") {
+    return <NarrativeScreen lines={[PHASE4_DATA.transition]} onContinue={() => setStep("result")} buttonText="Ver Resultado ★" />;
+  }
 
   if (step === "teaching") {
     return (
@@ -1115,12 +1504,27 @@ function Phase4({ onComplete }) {
             {String.fromCharCode(65 + i)}) {opt}
           </button>
         ))}
+
+        {!showResult && !showHint && q.hint && (
+          <div style={{ marginBottom: 12, marginTop: 8, textAlign: "center" }}>
+            <button onClick={() => setShowHint(true)} style={{ background: "none", border: `1px solid ${COLORS.accentDim}44`, borderRadius: 8, padding: "8px 16px", color: COLORS.accentLight, fontSize: 13, cursor: "pointer", fontFamily: "inherit" }}>
+              💡 Preciso de uma dica!
+            </button>
+          </div>
+        )}
+
+        {!showResult && showHint && q.hint && (
+          <div style={{ background: COLORS.accent + "11", border: `1px solid ${COLORS.accentDim}44`, borderRadius: 10, padding: 12, marginBottom: 12, marginTop: 8 }}>
+            <span style={{ fontSize: 13, color: COLORS.accentLight }}>💡 Dica do Mestre: {q.hint}</span>
+          </div>
+        )}
+
         {showResult && (
-          <div style={{ background: isCorrect ? COLORS.successBg : COLORS.errorBg, borderRadius: 10, padding: 14, marginTop: 8, border: `1px solid ${isCorrect ? COLORS.success : COLORS.error}44` }}>
+          <div role="alert" style={{ background: isCorrect ? COLORS.successBg : COLORS.errorBg, borderRadius: 10, padding: 14, marginTop: 8, border: `1px solid ${isCorrect ? COLORS.success : COLORS.error}44` }}>
             <p style={{ margin: 0, color: isCorrect ? COLORS.success : COLORS.error, fontWeight: "bold", marginBottom: 4 }}>
-              {isCorrect ? "✅ Correto!" : `❌ Resposta: ${q.options[q.answer]}`}
+              {isCorrect ? "✅ Correto!" : "❌ Não foi dessa vez!"}
             </p>
-            {q.explanation && <p style={{ margin: 0, fontSize: 14, color: COLORS.textDim, fontStyle: "italic" }}>{q.explanation}</p>}
+            {q.feedbacks && selected !== null && <p style={{ margin: 0, fontSize: 14, color: COLORS.textDim, lineHeight: 1.6 }}>{stripPrefix(q.feedbacks[selected])}</p>}
           </div>
         )}
         <div style={{ textAlign: "right", marginTop: 12 }}>
@@ -1216,11 +1620,11 @@ function Phase5({ onComplete }) {
               const m = SIMPLE_MACHINES[key];
               const sel = selectedMachines.includes(key);
               return (
-                <div key={key} onClick={() => toggleMachine(key)} style={{ ...styles.machineCard(sel), border: `1.5px solid ${sel ? COLORS.accent : COLORS.border}`, background: sel ? COLORS.accent + "22" : COLORS.bgCardHover, cursor: submitted ? "default" : "pointer" }}>
+                <button key={key} onClick={() => toggleMachine(key)} disabled={submitted} aria-label={`${sel ? "Remover" : "Selecionar"} ${m.name}`} aria-pressed={sel} style={{ ...styles.machineCard(sel), border: `1.5px solid ${sel ? COLORS.accent : COLORS.border}`, background: sel ? COLORS.accent + "22" : COLORS.bgCardHover, cursor: submitted ? "default" : "pointer", fontFamily: "inherit" }}>
                   <div style={{ fontSize: 22 }}>{m.icon}</div>
                   <div style={{ fontSize: 12, fontWeight: "bold", color: sel ? COLORS.accentLight : COLORS.textDim }}>{m.name}</div>
                   {sel && <div style={{ color: COLORS.accent, fontSize: 14, marginTop: 2 }}>✓</div>}
-                </div>
+                </button>
               );
             })}
           </div>
@@ -1270,12 +1674,31 @@ function Phase5({ onComplete }) {
 
 // ---- CERTIFICATE ----
 function Certificate({ studentName, inventionName, totalStars, onRestart }) {
+  const [showCert, setShowCert] = useState(false);
+
+  const closingNarrative = "Você começou como um visitante curioso em uma oficina empoeirada e agora sai como inventor! Aprendeu a reconhecer máquinas simples no cotidiano, entendeu como funcionam, viajou pela história para ver como transformaram o mundo, desmontou máquinas complexas e, no final, criou sua própria engenhoca. Dê-me um ponto de apoio e moverei o mundo — mas você nem precisou de ponto de apoio. Precisou apenas de curiosidade e raciocínio!";
+
+  const getPerformance = () => {
+    if (totalStars >= 12) return { title: "Mestre Inventor", stars: 3, message: "Impressionante! Você dominou as máquinas simples como um verdadeiro mestre da mecânica. Sabia que Leonardo da Vinci também começou estudando alavancas e roldanas? Quem sabe qual será sua próxima invenção!" };
+    if (totalStars >= 8) return { title: "Inventor Habilidoso", stars: 2, message: "Muito bem! Você mostrou que entende os princípios das máquinas simples e sabe aplicá-los. Que tal jogar novamente para conquistar ainda mais estrelas? Cada tentativa é uma chance de aprender algo novo!" };
+    if (totalStars >= 4) return { title: "Aprendiz de Inventor", stars: 1, message: "Bom trabalho! Você já deu os primeiros passos no mundo das máquinas simples. Revise os cards de cada fase e tente novamente — com mais prática, você vai dominar cada conceito!" };
+    return { title: "Inventor em Treinamento", stars: 0, message: "Toda grande invenção começa com tentativa e erro! O importante é que você explorou, tentou e aprendeu algo novo. Jogue novamente com calma, leia as dicas do Mestre Arquimedes e você vai ver a diferença!" };
+  };
+
+  const perf = getPerformance();
+
+  if (!showCert) {
+    return <NarrativeScreen lines={[closingNarrative]} onContinue={() => setShowCert(true)} buttonText="Ver Certificado 🏆" />;
+  }
+
   return (
     <div style={{ textAlign: "center", padding: "20px 0" }}>
       <div style={{ ...styles.card, background: `linear-gradient(135deg, #2a2018, #1a1410)`, border: `2px solid ${COLORS.accent}`, padding: "32px 24px", position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 4, background: `linear-gradient(90deg, ${COLORS.accentDim}, ${COLORS.accent}, ${COLORS.accentDim})` }} />
+
+        <p style={{ color: COLORS.textDim, fontSize: 12, letterSpacing: 1, marginBottom: 4 }}>ENGENHOCA: A Oficina do Tempo</p>
         <p style={{ color: COLORS.accent, fontSize: 14, letterSpacing: 4, textTransform: "uppercase", marginBottom: 4 }}>Certificado</p>
-        <h2 style={{ color: COLORS.accentLight, fontSize: "clamp(1.5rem, 4vw, 2rem)", margin: "8px 0" }}>🏆 Jovem Inventor 🏆</h2>
+        <h2 style={{ color: COLORS.accentLight, fontSize: "clamp(1.5rem, 4vw, 2rem)", margin: "8px 0" }}>🏆 Certificado de Jovem Inventor 🏆</h2>
         <p style={{ color: COLORS.textDim, fontSize: 14, marginBottom: 16 }}>Concedido pela Oficina do Mestre Arquimedes</p>
 
         <div style={{ background: COLORS.bgLight, borderRadius: 12, padding: 16, margin: "16px 0" }}>
@@ -1290,13 +1713,39 @@ function Certificate({ studentName, inventionName, totalStars, onRestart }) {
           </div>
         )}
 
-        <Stars count={totalStars >= 12 ? 3 : totalStars >= 8 ? 2 : 1} />
-        <p style={{ color: COLORS.textDim, fontSize: 14 }}>Estrelas totais: {totalStars}/15</p>
+        <Stars count={perf.stars} />
+        <p style={{ color: COLORS.textDim, fontSize: 14, margin: "0 0 4px" }}>Estrelas totais: {totalStars}/15</p>
+
+        <div style={{ background: COLORS.accent + "11", borderRadius: 12, padding: 16, margin: "16px 0", border: `1px solid ${COLORS.accent}33` }}>
+          <p style={{ color: COLORS.accent, fontWeight: "bold", fontSize: "1.1rem", margin: "0 0 8px" }}>
+            {perf.stars > 0 ? "⭐".repeat(perf.stars) : "—"} {perf.title}
+          </p>
+          <p style={{ color: COLORS.text, fontSize: 14, lineHeight: 1.6, margin: 0, fontStyle: "italic" }}>
+            "{perf.message}"
+          </p>
+        </div>
+
+        <div style={{ background: COLORS.bgLight, borderRadius: 12, padding: 16, margin: "16px 0", textAlign: "left" }}>
+          <p style={{ color: COLORS.textDim, fontSize: 13, marginBottom: 8, textAlign: "center" }}>📋 O que você aprendeu:</p>
+          {[
+            "O que são máquinas simples e onde encontrá-las no cotidiano",
+            "Como cada uma das 6 máquinas simples funciona",
+            "Como a humanidade usou máquinas simples ao longo da história",
+            "Como máquinas complexas são combinações de máquinas simples",
+            "Como inventar soluções para problemas reais usando máquinas simples",
+          ].map((item, i) => (
+            <p key={i} style={{ color: COLORS.text, fontSize: 13, lineHeight: 1.6, margin: "5px 0" }}>
+              ✦ {item}
+            </p>
+          ))}
+        </div>
 
         <p style={{ color: COLORS.text, fontStyle: "italic", lineHeight: 1.6, margin: "16px 0" }}>
           "Dê-me um ponto de apoio e moverei o mundo." — Arquimedes
         </p>
-        <p style={{ color: COLORS.textDim, fontSize: 12 }}>EF07CI01/ES — Máquinas Simples</p>
+
+        <p style={{ color: COLORS.textDim, fontSize: 12, margin: "12px 0 4px" }}>BNCC EF07CI01 | SAEB E1A5 · E1B7 | Máquinas simples · 7º ano — Ensino Fundamental</p>
+        <p style={{ color: COLORS.textDim, fontSize: 12, margin: 0 }}>Ciência Plural — cienciaplural.com.br</p>
       </div>
 
       <button style={{ ...styles.button("secondary"), marginTop: 16 }} onClick={onRestart}>
@@ -1314,7 +1763,12 @@ function WelcomeScreen({ onStart }) {
     <div style={{ textAlign: "center", padding: "40px 0 20px" }}>
       <div style={{ fontSize: 64, marginBottom: 8 }}>⚙️</div>
       <h1 style={{ ...styles.title, marginBottom: 8 }}>ENGENHOCA</h1>
-      <p style={{ ...styles.subtitle, marginBottom: 30 }}>A Oficina do Tempo</p>
+      <p style={{ ...styles.subtitle, marginBottom: 12 }}>A Oficina do Tempo</p>
+      <div style={{ marginBottom: 30 }}>
+        <span style={{ display: "inline-block", padding: "4px 14px", borderRadius: 20, fontSize: 12, fontWeight: "bold", background: COLORS.accent + "18", color: COLORS.accentLight, border: `1px solid ${COLORS.accent}33`, letterSpacing: 0.5 }}>
+          BNCC EF07CI01 · SAEB E1A5 · SAEB E1B7
+        </span>
+      </div>
 
       <div style={{ ...styles.card, maxWidth: 480, margin: "0 auto" }}>
         <p style={{ color: COLORS.text, lineHeight: 1.7, marginBottom: 16 }}>
@@ -1329,7 +1783,7 @@ function WelcomeScreen({ onStart }) {
             "Como cada uma funciona",
             "Como foram usadas ao longo da história",
             "Como máquinas complexas combinam as simples",
-            "Como INVENTAR soluções para problemas reais",
+            "Como inventar soluções para problemas reais",
           ].map((item, i) => (
             <p key={i} style={{ color: COLORS.text, fontSize: 14, lineHeight: 1.6, margin: "6px 0" }}>
               ✦ {item}
@@ -1343,9 +1797,13 @@ function WelcomeScreen({ onStart }) {
         </div>
 
         <button style={{ ...styles.button("primary"), width: "100%", justifyContent: "center", fontSize: 18, padding: "14px 28px" }} onClick={() => onStart(name)}>
-          Entrar na Oficina ⚙️
+          ⚙️ Entrar na Oficina
         </button>
       </div>
+
+      <p style={{ color: COLORS.textDim, fontSize: 12, marginTop: 20, lineHeight: 1.6 }}>
+        Jogo educativo — BNCC EF07CI01 | Máquinas simples · 7º ano — Ensino Fundamental
+      </p>
     </div>
   );
 }
